@@ -2985,117 +2985,119 @@
           line-height: 1.5;
         }
 
-        /* =================== PROFISSIONAIS (cards da home) =================== */
+        /* =================== PROFISSIONAIS (cards da home): lista horizontal =================== */
         .professionals {
           padding: 40px 0 48px;
         }
+        .professionals > .container > p {
+          text-align: left !important;
+        }
         .professionals-grid {
-          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          grid-template-columns: 1fr;
           gap: 12px;
         }
         .professional-card {
-          display: grid;
-          grid-template-columns: 96px minmax(0, 1fr);
-          column-gap: 16px;
-          row-gap: 2px;
-          padding: 16px;
-          border-radius: var(--md-radius-xl);
-          border: 1px solid var(--md-outline-variant);
-          box-shadow: none;
+          flex-direction: row;
+          border: none;
+          border-radius: 16px;
+          box-shadow:
+            0 1px 2px rgba(0, 0, 0, 0.3),
+            0 1px 3px 1px rgba(0, 0, 0, 0.15);
         }
         .professional-card:hover {
           transform: none;
-          box-shadow: none;
-        }
-        .professional-card .info {
-          display: contents;
+          box-shadow:
+            0 1px 2px rgba(0, 0, 0, 0.3),
+            0 1px 3px 1px rgba(0, 0, 0, 0.15);
         }
         .professional-card .avatar {
-          grid-column: 1;
-          grid-row: 1 / span 3;
-          width: 96px;
-          height: 96px;
-          border-radius: var(--md-radius-l);
+          width: 104px;
+          height: auto;
+          min-height: 100%;
+          flex-shrink: 0;
+          object-fit: cover;
+        }
+        .professional-card .info {
+          padding: 12px;
+          min-width: 0;
         }
         .professional-card .name {
-          grid-column: 2;
-          grid-row: 1;
-          align-self: center;
-          margin: 0;
-          font-size: 17px;
+          font-size: 16px;
+          font-weight: 500;
         }
         .professional-card .profession {
-          grid-column: 2;
-          grid-row: 2;
-          align-self: center;
-          font-size: 14px;
+          font-size: 13px;
+          color: var(--primary-blue);
+          font-weight: 500;
         }
         .professional-card .location {
-          grid-column: 2;
-          grid-row: 3;
-          align-self: center;
-          margin: 0;
-          font-size: 12.5px;
+          font-size: 12px;
         }
         .professional-card .tags {
-          grid-column: 1 / -1;
-          grid-row: 4;
-          margin: 14px 0 4px;
+          margin: 6px 0 10px;
+          gap: 4px;
+          max-height: 52px;
+          overflow: hidden;
         }
         .professional-card .tags span {
-          padding: 4px 12px;
-          background: var(--md-surface-container);
+          font-size: 11px;
+          padding: 2px 8px;
+          border-radius: 8px;
+          border: 1px solid #c4c6d0;
+          background: transparent;
         }
         .professional-card .actions {
-          grid-column: 1 / -1;
-          grid-row: 5;
-          margin-top: 10px;
+          gap: 8px;
         }
         .professional-card .actions .btn {
-          min-height: 48px;
-          font-size: 15px;
+          min-height: 40px;
+          padding: 0 12px;
+          font-size: 13px;
         }
         .professional-card .actions .btn-success {
-          flex: 0 0 64px;
+          flex: 0 0 48px;
           padding: 0;
         }
 
-        /* =================== PORTFÓLIO (home) =================== */
+        /* =================== PORTFÓLIO (home): grade 2 colunas, legenda sempre visível =================== */
         .portfolio {
           padding: 40px 0 48px;
         }
         .portfolio-grid {
-          grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-          gap: 12px;
+          grid-template-columns: 1fr 1fr;
+          gap: 8px;
         }
         .portfolio-item {
-          aspect-ratio: 16 / 10;
-          border-radius: var(--md-radius-l);
+          border-radius: 12px;
+          aspect-ratio: 1 / 1;
         }
         .portfolio-item:hover img {
           transform: none;
         }
         .portfolio-item .overlay {
           opacity: 1;
-          align-items: flex-start;
           justify-content: flex-end;
-          padding: 16px;
+          align-items: flex-start;
           text-align: left;
+          padding: 12px;
           background: linear-gradient(
             0deg,
-            rgba(0, 0, 0, 0.78) 0%,
-            rgba(0, 0, 0, 0.25) 55%,
-            rgba(0, 0, 0, 0) 100%
+            rgba(0, 0, 0, 0.75) 0%,
+            transparent 65%
           );
         }
         .portfolio-item .overlay .h3 {
-          font-size: 17px;
+          font-size: 14px;
+          line-height: 18px;
+        }
+        .portfolio-item .overlay .small {
+          font-size: 11px;
         }
         .portfolio-item .overlay .btn {
-          margin-top: 10px;
-          min-height: 40px;
-          padding: 8px 18px;
-          font-size: 13px;
+          display: none; /* o cartão inteiro abre o projeto */
+        }
+        .portfolio-item:active img {
+          transform: scale(1.03);
         }
 
         /* =================== ANTES E DEPOIS =================== */
@@ -3489,6 +3491,12 @@
         }
         .project-modal-content .modal-body .btn {
           min-height: 52px;
+        }
+      }
+
+      @media (max-width: 380px) {
+        .professional-card .avatar {
+          width: 88px;
         }
       }
 
@@ -7008,6 +7016,16 @@
               .getElementById("searchForm")
               .dispatchEvent(new Event("submit"));
           }
+        });
+      });
+
+      // No mobile não existe hover: o cartão inteiro abre o projeto
+      document.querySelectorAll(".portfolio-item").forEach((item) => {
+        item.addEventListener("click", function (e) {
+          const mobile = window.matchMedia("(max-width: 768px)").matches;
+          if (!mobile || e.target.closest(".ver-projeto")) return;
+          const btn = item.querySelector(".ver-projeto");
+          if (btn) btn.click();
         });
       });
 
