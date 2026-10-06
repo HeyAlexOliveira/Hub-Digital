@@ -2718,6 +2718,786 @@
         height: 16px;
         object-fit: contain;
       }
+
+      /* =====================================================================
+         MOBILE · MATERIAL DESIGN 3
+         Aplica-se somente a telas <= 768px (da busca até o rodapé, perfis e
+         modal de projeto). Header e hero NÃO são alterados. Desktop intacto.
+         ===================================================================== */
+      @media (max-width: 768px) {
+        :root {
+          --md-surface-container: #f1f4f8;
+          --md-surface-container-high: #e6ebf1;
+          --md-outline-variant: #dde3ea;
+          --md-radius-xl: 28px;
+          --md-radius-l: 20px;
+          --md-radius-m: 16px;
+        }
+
+        /* ----- Gutters laterais (16dp) só nas seções abaixo do hero ----- */
+        .categories .container,
+        .solution-transition .container,
+        .how-it-works .container,
+        .professionals .container,
+        .portfolio .container,
+        .before-after .container,
+        .security .container,
+        .faq .container,
+        .cta-final .container,
+        .footer .container {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+
+        /* ----- Tipografia (escala M3) ----- */
+        .categories .h2,
+        .how-it-works .h2,
+        .professionals .h2,
+        .portfolio .h2,
+        .before-after .h2,
+        .security .h2,
+        .faq .h2 {
+          font-size: 26px;
+          line-height: 1.25;
+        }
+        .categories .section-header,
+        .how-it-works .section-header,
+        .professionals .section-header,
+        .portfolio .section-header,
+        .before-after .section-header,
+        .security .section-header,
+        .faq .section-header {
+          text-align: left;
+          margin-bottom: 24px;
+        }
+        .section-header p {
+          font-size: 15px;
+          line-height: 1.6;
+          margin-top: 6px;
+        }
+
+        /* ----- Estados de toque (sem "hover grudado" no celular) ----- */
+        .search-section .btn:hover,
+        .professionals .btn:hover,
+        .portfolio .btn:hover,
+        .security .btn:hover,
+        .cta-final .btn:hover,
+        .profile-section .btn:hover,
+        .project-modal .btn:hover {
+          transform: none;
+        }
+        .search-section .btn:active,
+        .professionals .btn:active,
+        .portfolio .btn:active,
+        .security .btn:active,
+        .cta-final .btn:active,
+        .profile-section .btn:active,
+        .project-modal .btn:active {
+          transform: scale(0.98);
+          box-shadow: none;
+        }
+
+        /* =================== BUSCA =================== */
+        .search-section {
+          padding: 8px 0 24px;
+        }
+        .search-section .container {
+          margin: -24px 16px 0;
+          padding: 20px 16px;
+          border: none;
+          border-radius: var(--md-radius-xl);
+          box-shadow:
+            0 1px 3px rgba(0, 0, 0, 0.12),
+            0 6px 16px rgba(0, 0, 0, 0.08);
+        }
+        .search-section .h3 {
+          font-size: 20px;
+          margin-bottom: 16px;
+        }
+        .search-form {
+          gap: 12px;
+        }
+        .search-form .field {
+          flex: 1 1 auto;
+          min-width: 0;
+        }
+        .search-form label {
+          font-size: 12px;
+          font-weight: 500;
+          letter-spacing: 0.4px;
+          color: var(--primary-blue);
+          margin: 0 0 6px 4px;
+        }
+        .search-form input,
+        .search-form select {
+          height: 56px;
+          padding: 0 16px;
+          border: 2px solid transparent;
+          border-radius: var(--md-radius-m);
+          background-color: var(--md-surface-container);
+          font-size: 16px;
+          color: var(--gray-800);
+        }
+        .search-form input::placeholder {
+          color: #78909c;
+        }
+        .search-form input:focus,
+        .search-form select:focus {
+          background-color: var(--white);
+          border-color: var(--primary-blue);
+          box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.12);
+        }
+        .search-form select {
+          -webkit-appearance: none;
+          appearance: none;
+          padding-right: 44px;
+          background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23546e7a'><path d='M7 10l5 5 5-5z'/></svg>");
+          background-repeat: no-repeat;
+          background-position: right 14px center;
+          background-size: 22px;
+        }
+        .search-form .btn {
+          width: 100%;
+          min-height: 56px;
+          margin-top: 4px;
+          font-size: 16px;
+        }
+
+        /* =================== CATEGORIAS =================== */
+        .categories {
+          padding: 32px 0 40px;
+        }
+        .categories-grid {
+          gap: 12px;
+        }
+        .category-card {
+          padding: 16px 12px;
+          border-radius: var(--md-radius-l);
+          background: var(--md-surface-container);
+          -webkit-tap-highlight-color: transparent;
+        }
+        .category-card img {
+          width: 100%;
+          height: 64px;
+          margin-bottom: 10px;
+        }
+        .category-card .name {
+          font-size: 15px;
+        }
+        .category-card .desc {
+          font-size: 12px;
+          line-height: 1.4;
+        }
+        .category-card:hover {
+          transform: none;
+          box-shadow: none;
+          border-color: transparent;
+          background: var(--md-surface-container);
+        }
+        .category-card:active {
+          transform: scale(0.97);
+          background: var(--md-surface-container-high);
+          border-color: var(--primary-orange);
+        }
+
+        /* =================== SOLUÇÃO =================== */
+        .solution-transition {
+          padding: 40px 0 48px;
+        }
+        .solution-transition .h2 {
+          font-size: 24px;
+          line-height: 1.3;
+        }
+        .solution-flow {
+          flex-direction: column;
+          gap: 6px;
+          margin-top: 24px;
+        }
+        .solution-flow .step {
+          width: 100%;
+          justify-content: center;
+          padding: 14px 20px;
+          font-size: 16px;
+          border-radius: var(--md-radius-l);
+        }
+        .solution-flow .arrow {
+          font-size: 24px;
+          line-height: 1;
+          transform: rotate(90deg);
+        }
+
+        /* =================== COMO FUNCIONA =================== */
+        .how-it-works {
+          padding: 40px 0 48px;
+        }
+        .how-grid {
+          gap: 12px;
+        }
+        .how-card {
+          position: relative;
+          display: grid;
+          grid-template-columns: 56px minmax(0, 1fr);
+          column-gap: 16px;
+          align-items: center;
+          text-align: left;
+          padding: 16px;
+          border: 1px solid var(--md-outline-variant);
+          border-radius: var(--md-radius-l);
+          box-shadow: none;
+        }
+        .how-card:hover {
+          transform: none;
+          box-shadow: none;
+          border-color: var(--md-outline-variant);
+        }
+        .how-card .step-num {
+          position: absolute;
+          top: 8px;
+          right: 16px;
+          margin: 0;
+          font-size: 28px;
+          line-height: 1.2;
+        }
+        .how-card img {
+          grid-column: 1;
+          grid-row: 1 / span 2;
+          width: 56px;
+          height: 56px;
+          margin: 0;
+          padding: 8px;
+          border-radius: var(--md-radius-m);
+          background: var(--md-surface-container);
+        }
+        .how-card .h3 {
+          grid-column: 2;
+          grid-row: 1;
+          align-self: end;
+          margin: 0;
+          padding-right: 28px;
+          font-size: 17px;
+        }
+        .how-card p {
+          grid-column: 2;
+          grid-row: 2;
+          align-self: start;
+          padding-right: 8px;
+          font-size: 14px;
+          line-height: 1.5;
+        }
+
+        /* =================== PROFISSIONAIS (cards da home) =================== */
+        .professionals {
+          padding: 40px 0 48px;
+        }
+        .professionals-grid {
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          gap: 12px;
+        }
+        .professional-card {
+          display: grid;
+          grid-template-columns: 96px minmax(0, 1fr);
+          column-gap: 16px;
+          row-gap: 2px;
+          padding: 16px;
+          border-radius: var(--md-radius-xl);
+          border: 1px solid var(--md-outline-variant);
+          box-shadow: none;
+        }
+        .professional-card:hover {
+          transform: none;
+          box-shadow: none;
+        }
+        .professional-card .info {
+          display: contents;
+        }
+        .professional-card .avatar {
+          grid-column: 1;
+          grid-row: 1 / span 3;
+          width: 96px;
+          height: 96px;
+          border-radius: var(--md-radius-l);
+        }
+        .professional-card .name {
+          grid-column: 2;
+          grid-row: 1;
+          align-self: center;
+          margin: 0;
+          font-size: 17px;
+        }
+        .professional-card .profession {
+          grid-column: 2;
+          grid-row: 2;
+          align-self: center;
+          font-size: 14px;
+        }
+        .professional-card .location {
+          grid-column: 2;
+          grid-row: 3;
+          align-self: center;
+          margin: 0;
+          font-size: 12.5px;
+        }
+        .professional-card .tags {
+          grid-column: 1 / -1;
+          grid-row: 4;
+          margin: 14px 0 4px;
+        }
+        .professional-card .tags span {
+          padding: 4px 12px;
+          background: var(--md-surface-container);
+        }
+        .professional-card .actions {
+          grid-column: 1 / -1;
+          grid-row: 5;
+          margin-top: 10px;
+        }
+        .professional-card .actions .btn {
+          min-height: 48px;
+          font-size: 15px;
+        }
+        .professional-card .actions .btn-success {
+          flex: 0 0 64px;
+          padding: 0;
+        }
+
+        /* =================== PORTFÓLIO (home) =================== */
+        .portfolio {
+          padding: 40px 0 48px;
+        }
+        .portfolio-grid {
+          grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+          gap: 12px;
+        }
+        .portfolio-item {
+          aspect-ratio: 16 / 10;
+          border-radius: var(--md-radius-l);
+        }
+        .portfolio-item:hover img {
+          transform: none;
+        }
+        .portfolio-item .overlay {
+          opacity: 1;
+          align-items: flex-start;
+          justify-content: flex-end;
+          padding: 16px;
+          text-align: left;
+          background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.78) 0%,
+            rgba(0, 0, 0, 0.25) 55%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+        .portfolio-item .overlay .h3 {
+          font-size: 17px;
+        }
+        .portfolio-item .overlay .btn {
+          margin-top: 10px;
+          min-height: 40px;
+          padding: 8px 18px;
+          font-size: 13px;
+        }
+
+        /* =================== ANTES E DEPOIS =================== */
+        .before-after {
+          padding: 40px 0 48px;
+        }
+        .ba-carousel-wrapper {
+          border-radius: var(--md-radius-xl);
+        }
+        .ba-slide {
+          gap: 8px;
+          padding: 0;
+        }
+        .ba-item {
+          border-radius: var(--md-radius-m);
+          box-shadow: none;
+        }
+        .ba-carousel-btn,
+        .ba-carousel-btn:hover {
+          width: 40px;
+          height: 40px;
+          background: rgba(255, 255, 255, 0.92);
+          color: var(--gray-800);
+          box-shadow: var(--shadow-md);
+          transform: translateY(-50%);
+        }
+        .ba-carousel-btn:active {
+          background: var(--white);
+          transform: translateY(-50%) scale(0.92);
+        }
+        .ba-dots {
+          gap: 8px;
+          margin-top: 16px;
+        }
+        .ba-dots .dot {
+          width: 8px;
+          height: 8px;
+        }
+        .ba-dots .dot.active {
+          width: 24px;
+          border-radius: 6px;
+          transform: none;
+        }
+
+        /* =================== SEGURANÇA =================== */
+        .security {
+          padding: 40px 0 48px;
+        }
+        .security-grid {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+        .security-card {
+          padding: 20px;
+          border-radius: var(--md-radius-l);
+          box-shadow: none;
+          border: 1px solid var(--md-outline-variant);
+          border-left: 4px solid var(--primary-blue);
+        }
+        .security-card:hover {
+          transform: none;
+          box-shadow: none;
+        }
+        .security-card .btn-external-link {
+          min-height: 44px;
+        }
+        .security .cta-center {
+          margin-top: 24px;
+        }
+        .security .cta-center .btn {
+          width: 100%;
+          min-height: 56px;
+          height: auto;
+          padding: 12px 20px;
+          font-size: 15px;
+          line-height: 1.3;
+        }
+        .security .disclaimer {
+          margin-top: 20px;
+          padding: 14px 16px;
+          max-width: none;
+          text-align: left;
+          font-size: 12px;
+          line-height: 1.6;
+          color: var(--gray-800);
+          background: #fff3e0;
+          border-radius: var(--md-radius-m);
+        }
+
+        /* =================== FAQ =================== */
+        .faq {
+          padding: 40px 0 48px;
+        }
+        .faq-list {
+          background: var(--md-surface-container);
+          border-radius: var(--md-radius-xl);
+          overflow: hidden;
+        }
+        .faq-item {
+          padding: 0 20px;
+          border-bottom: 1px solid var(--md-outline-variant);
+        }
+        .faq-item:last-child {
+          border-bottom: none;
+        }
+        .faq-question {
+          min-height: 60px;
+          padding: 14px 0;
+          gap: 12px;
+          font-size: 15px;
+          line-height: 1.4;
+          -webkit-tap-highlight-color: transparent;
+        }
+        .faq-question .icon {
+          flex-shrink: 0;
+          font-size: 16px;
+        }
+        .faq-item.open .faq-answer {
+          max-height: 320px;
+        }
+        .faq-answer {
+          font-size: 14px;
+          line-height: 1.6;
+        }
+
+        /* =================== CTA FINAL =================== */
+        .cta-final {
+          padding: 56px 0 64px;
+        }
+        .cta-final .h2 {
+          font-size: 28px;
+        }
+        .cta-final p {
+          margin-bottom: 24px;
+          font-size: 15px;
+        }
+        .cta-final .option {
+          padding: 24px 20px;
+          border-radius: var(--md-radius-xl);
+        }
+        .cta-final .option:hover {
+          transform: none;
+          background: rgba(255, 255, 255, 0.06);
+        }
+        .cta-final .option .btn {
+          min-height: 56px;
+          padding: 14px 24px;
+          font-size: 16px;
+        }
+
+        /* =================== RODAPÉ =================== */
+        .footer {
+          padding: 40px 0 calc(24px + env(safe-area-inset-bottom));
+        }
+        .footer .container {
+          grid-template-columns: 1fr 1fr;
+          gap: 28px 16px;
+        }
+        .footer-brand {
+          grid-column: 1 / -1;
+        }
+        .footer .container > div:nth-child(4) {
+          grid-column: 1 / -1;
+        }
+        .footer a {
+          display: flex;
+          align-items: center;
+          min-height: 40px;
+          margin-bottom: 0;
+        }
+        .footer .social a {
+          width: 48px;
+          height: 48px;
+        }
+        .footer-bottom {
+          margin-top: 0;
+          padding-top: 20px;
+          font-size: 12px;
+        }
+
+        /* =================== PERFIL DO PROFISSIONAL =================== */
+        .profile-section {
+          padding-top: calc(var(--header-height) + 8px);
+          padding-bottom: 24px;
+        }
+        .profile-section .container {
+          padding: 0 12px;
+        }
+        .btn-back {
+          min-height: 48px;
+          padding: 8px 14px 8px 8px;
+          border-radius: 24px;
+          font-size: 15px;
+          font-weight: 500;
+          color: var(--primary-blue);
+          -webkit-tap-highlight-color: transparent;
+        }
+        .btn-back:active {
+          background: rgba(13, 71, 161, 0.1);
+        }
+        .profile-card {
+          border-radius: var(--md-radius-xl);
+          box-shadow: var(--shadow-md);
+        }
+
+        /* Cabeçalho do perfil: avatar + dados lado a lado, ação em largura total */
+        .profile-header {
+          display: grid;
+          grid-template-columns: 80px minmax(0, 1fr);
+          column-gap: 16px;
+          row-gap: 2px;
+          align-items: center;
+          padding: 20px 16px 16px;
+          text-align: left;
+        }
+        .profile-header .avatar {
+          grid-column: 1;
+          grid-row: 1 / span 3;
+          width: 80px;
+          height: 80px;
+          border-width: 3px;
+        }
+        .profile-header .info {
+          display: contents;
+        }
+        .profile-header .info h1 {
+          grid-column: 2;
+          grid-row: 1;
+          align-self: end;
+          justify-content: flex-start;
+          gap: 8px;
+          font-size: 20px;
+          line-height: 1.25;
+        }
+        .profile-header .info .badge {
+          padding: 3px 10px;
+          font-size: 11px;
+        }
+        .profile-header .info .profession {
+          grid-column: 2;
+          grid-row: 2;
+          margin: 0;
+          font-size: 15px;
+        }
+        .profile-header .info .location {
+          grid-column: 2;
+          grid-row: 3;
+          align-self: start;
+          margin: 0;
+          font-size: 13px;
+        }
+        .profile-header .actions {
+          grid-column: 1 / -1;
+          grid-row: 4;
+          margin-top: 14px;
+        }
+        .profile-header .actions .btn {
+          width: 100%;
+          min-height: 48px;
+          font-size: 15px;
+        }
+
+        /* Abas (M3 primary tabs: distribuídas em largura total) */
+        .profile-tabs {
+          padding: 0;
+          background: var(--white);
+          border-bottom: 1px solid var(--md-outline-variant);
+        }
+        .profile-tabs .tab-btn {
+          flex: 1 1 0;
+          justify-content: center;
+          min-height: 52px;
+          padding: 12px 8px;
+          font-size: 14px;
+          font-weight: 600;
+          -webkit-tap-highlight-color: transparent;
+        }
+        .profile-tabs .tab-btn:active {
+          background: rgba(13, 71, 161, 0.08);
+        }
+        .profile-tabs .tab-btn .badge {
+          margin-left: 2px;
+          padding: 0 8px;
+        }
+
+        .profile-body {
+          padding: 20px 16px 24px;
+        }
+        .profile-body h3 {
+          font-size: 18px;
+        }
+
+        /* Portfólio do perfil */
+        .profile-portfolio-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 10px;
+        }
+        .profile-portfolio-item {
+          aspect-ratio: 1 / 1;
+          border-radius: var(--md-radius-m);
+        }
+        .profile-portfolio-item:hover {
+          transform: none;
+          box-shadow: none;
+        }
+        .profile-portfolio-item:active {
+          transform: scale(0.97);
+        }
+        .profile-portfolio-item .overlay {
+          padding: 10px;
+        }
+        .profile-portfolio-item .overlay .title {
+          font-size: 13px;
+          line-height: 1.3;
+        }
+        .profile-portfolio-item .overlay .category {
+          font-size: 11px;
+        }
+
+        /* Sobre */
+        .about-grid {
+          gap: 20px;
+        }
+        .about-bio p {
+          font-size: 15px;
+          line-height: 1.7;
+        }
+        .about-details {
+          padding: 16px 16px 8px;
+          border-radius: var(--md-radius-l);
+        }
+        .about-details .detail-item .label {
+          flex-shrink: 0;
+        }
+        .about-details .detail-item .value {
+          flex: 1;
+          min-width: 0;
+          overflow-wrap: anywhere;
+        }
+
+        /* Serviços */
+        .profile-services-grid {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+        .profile-service-card {
+          padding: 16px;
+          border-radius: var(--md-radius-l);
+        }
+        .profile-service-card:hover {
+          transform: none;
+          box-shadow: none;
+        }
+        .profile-service-card .btn {
+          min-height: 48px;
+          margin-top: 14px;
+          font-size: 15px;
+        }
+
+        /* =================== MODAL DE PROJETO (bottom sheet) =================== */
+        .project-modal {
+          padding: 0;
+          align-items: flex-end;
+        }
+        .project-modal-content {
+          max-width: none;
+          max-height: 92vh;
+          border-radius: var(--md-radius-xl) var(--md-radius-xl) 0 0;
+          animation: sheetIn 0.32s cubic-bezier(0.2, 0, 0, 1);
+        }
+        @keyframes sheetIn {
+          from {
+            transform: translateY(100%);
+          }
+          to {
+            transform: translateY(0);
+          }
+        }
+        .carousel-container {
+          border-radius: var(--md-radius-xl) var(--md-radius-xl) 0 0;
+        }
+        .project-modal-content .modal-close {
+          top: 12px;
+          right: 12px;
+        }
+        .project-modal-content .modal-body {
+          padding: 20px 20px calc(24px + env(safe-area-inset-bottom));
+        }
+        .project-modal-content .modal-body .title {
+          font-size: 20px;
+        }
+        .project-modal-content .modal-body .btn {
+          min-height: 52px;
+        }
+      }
+
+      /* Telas bem estreitas: abas só com texto para não apertar */
+      @media (max-width: 400px) {
+        .profile-tabs .tab-btn img {
+          display: none;
+        }
+      }
     </style>
   </head>
 
@@ -3008,58 +3788,6 @@
               />
               <div class="name">Serralheiro</div>
               <div class="desc">Estruturas metálicas</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== PROBLEMA ===== -->
-      <section class="problem" id="problema">
-        <div class="container">
-          <div class="section-header reveal">
-            <h2 class="h2">
-              Encontrar um bom profissional ainda pode ser difícil.
-            </h2>
-          </div>
-          <div class="problem-grid">
-            <div class="problem-card reveal">
-              <img
-                src="https://i.ibb.co/DD8Rvqc1/icons-4.png"
-                alt="Visibilidade"
-                class="icon-problem"
-              />
-              <div class="number">01</div>
-              <h3 class="h3">Visibilidade</h3>
-              <p>
-                Profissionais dependem principalmente de indicações para
-                encontrar novos clientes.
-              </p>
-            </div>
-            <div class="problem-card reveal">
-              <img
-                src="https://i.ibb.co/TM7ScyVC/icons-7.png"
-                alt="Insegurança"
-                class="icon-problem"
-              />
-              <div class="number">02</div>
-              <h3 class="h3">Insegurança</h3>
-              <p>
-                Contratações sem informações claras podem gerar problemas
-                durante a execução do serviço.
-              </p>
-            </div>
-            <div class="problem-card reveal">
-              <img
-                src="https://i.ibb.co/JWZMQQs9/icons-5.png"
-                alt="Golpes"
-                class="icon-problem"
-              />
-              <div class="number">03</div>
-              <h3 class="h3">Golpes</h3>
-              <p>
-                Profissionais e clientes podem ficar expostos a fraudes e
-                problemas financeiros.
-              </p>
             </div>
           </div>
         </div>
@@ -4075,167 +4803,6 @@
             servem como referência para uma contratação mais segura. Consulte
             sempre um profissional jurídico para orientações específicas sobre
             seu contrato.
-          </p>
-        </div>
-      </section>
-
-      <!-- ===== ESTATÍSTICAS ===== -->
-      <section class="stats">
-        <div class="container">
-          <div class="stats-grid">
-            <div class="reveal">
-              <div class="number">+10</div>
-              <div class="label">Profissionais</div>
-            </div>
-            <div class="reveal">
-              <div class="number">+6</div>
-              <div class="label">Categorias</div>
-            </div>
-            <div class="reveal">
-              <div class="number">+6</div>
-              <div class="label">Serviços</div>
-            </div>
-            <div class="reveal">
-              <div class="number">+500</div>
-              <div class="label">Conexões</div>
-            </div>
-          </div>
-          <p
-            style="
-              text-align: center;
-              font-size: 13px;
-              color: var(--gray-600);
-              margin-top: 16px;
-            "
-          >
-            * Dados demonstrativos.
-          </p>
-        </div>
-      </section>
-
-      <!-- ===== ODS ===== -->
-      <section class="ods" id="ods">
-        <div class="container">
-          <div class="section-header reveal">
-            <h2 class="h2">Tecnologia que gera impacto.</h2>
-            <p class="body" style="color: var(--gray-600)">
-              O Hub Digital da Construção Civil busca contribuir para a
-              profissionalização, inclusão digital e valorização dos
-              trabalhadores autônomos.
-            </p>
-          </div>
-          <div class="ods-grid">
-            <div class="ods-card reveal">
-              <img
-                src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/unitednations.svg"
-                alt="ODS 8"
-              />
-              <div class="number">ODS 8</div>
-              <h3 class="h3">Trabalho Decente</h3>
-              <p>Crescimento Econômico</p>
-            </div>
-            <div class="ods-card reveal">
-              <img
-                src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/unitednations.svg"
-                alt="ODS 9"
-              />
-              <div class="number">ODS 9</div>
-              <h3 class="h3">Inovação</h3>
-              <p>Indústria e Infraestrutura</p>
-            </div>
-            <div class="ods-card reveal">
-              <img
-                src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/unitednations.svg"
-                alt="ODS 10"
-              />
-              <div class="number">ODS 10</div>
-              <h3 class="h3">Redução das Desigualdades</h3>
-              <p>Inclusão social</p>
-            </div>
-            <div class="ods-card reveal">
-              <img
-                src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/unitednations.svg"
-                alt="ODS 16"
-              />
-              <div class="number">ODS 16</div>
-              <h3 class="h3">Paz e Justiça</h3>
-              <p>Instituições eficazes</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== DEPOIMENTOS ===== -->
-      <section class="testimonials" id="depoimentos">
-        <div class="container">
-          <div class="section-header reveal">
-            <h2 class="h2">Quem faz parte dessa transformação</h2>
-          </div>
-          <div class="testimonials-grid">
-            <div class="testimonial-card reveal">
-              <div class="stars">★★★★★</div>
-              <blockquote>
-                “Encontrei um excelente pedreiro para minha reforma. O processo
-                foi muito simples.”
-              </blockquote>
-              <div class="author">
-                <img
-                  src="https://i.ibb.co/gb11Wrg7/perfil-2.jpg"
-                  alt="Avatar"
-                  loading="lazy"
-                />
-                <div>
-                  <div class="name">Ana Paula</div>
-                  <div class="role">Cliente</div>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial-card reveal">
-              <div class="stars">★★★★★</div>
-              <blockquote>
-                “O Hub me ajudou a conseguir novos clientes. Meu portfólio ficou
-                mais visível.”
-              </blockquote>
-              <div class="author">
-                <img
-                  src=https://i.ibb.co/NfhMXnr/perfil-1.jpg"
-                  alt="Avatar"
-                  loading="lazy"
-                />
-                <div>
-                  <div class="name">Carlos Souza</div>
-                  <div class="role">Pedreiro</div>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial-card reveal">
-              <div class="stars">★★★★☆</div>
-              <blockquote>
-                “Ótima plataforma para conectar profissionais e clientes.
-                Recomendo!”
-              </blockquote>
-              <div class="author">
-                <img
-                  src="https://i.ibb.co/GQB8pYy6/perfil-3.jpg"
-                  alt="Avatar"
-                  loading="lazy"
-                />
-                <div>
-                  <div class="name">Mariano Alves</div>
-                  <div class="role">Pintor</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <p
-            style="
-              text-align: center;
-              font-size: 13px;
-              color: var(--gray-600);
-              margin-top: 16px;
-            "
-          >
-            * Depoimentos fictícios para demonstração.
           </p>
         </div>
       </section>
