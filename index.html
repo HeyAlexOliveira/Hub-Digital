@@ -6,10 +6,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"
     />
-    <title>Hub Digital da Construção Civil | Vitória da Conquista - BA</title>
+    <title>Hub Digital da Construção Civil | Poções - BA e região</title>
     <meta
       name="description"
-      content="Encontre profissionais da construção civil em Vitória da Conquista. Conheça serviços, portfólios e entre em contato diretamente."
+      content="Encontre profissionais da construção civil em Poções e região. Conheça serviços, portfólios e entre em contato diretamente."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -639,13 +639,19 @@
       }
       .categories-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        gap: 10px;
+        align-items: stretch;
+      }
+      @media (min-width: 769px) and (max-width: 1000px) {
+        .categories-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
       }
       .category-card {
         background: var(--gray-100);
         border-radius: var(--radius);
-        padding: 24px 16px;
+        padding: 20px 8px;
         text-align: center;
         transition: all var(--transition);
         cursor: pointer;
@@ -665,10 +671,13 @@
       }
       .category-card .name {
         font-weight: 600;
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 1.25;
+        margin-bottom: 4px;
       }
       .category-card .desc {
-        font-size: 13px;
+        font-size: 12px;
+        line-height: 1.4;
         color: var(--gray-600);
       }
 
@@ -3691,7 +3700,7 @@
                 src="https://i.ibb.co/LWxyZK0/icon-4.png"
                 alt="Localização"
               />
-              <span>Vitória da Conquista</span>
+              <span>Poções e região</span>
             </div>
           </div>
         </div>
@@ -3717,10 +3726,11 @@
                 <option value="">Todas</option>
                 <option value="pedreiro">Pedreiro</option>
                 <option value="pintor">Pintor</option>
-                <option value="eletricista">Eletricista</option>
-                <option value="encanador">Encanador</option>
+                <option value="eletricista">Eletricista / Refrigeração</option>
+                <option value="manutencao">Manutenção Predial</option>
                 <option value="gesseiro">Gesseiro</option>
-                <option value="serralheiro">Serralheiro</option>
+                <option value="serralheiro">Soldador / Serralheiro</option>
+                <option value="telhadista">Telhadista</option>
               </select>
             </div>
             <div class="field">
@@ -3728,7 +3738,7 @@
               <input
                 type="text"
                 id="search-location"
-                placeholder="Vitória da Conquista"
+                placeholder="Poções e região"
                 aria-label="Digite sua localização"
               />
             </div>
@@ -3756,12 +3766,9 @@
           </div>
           <div class="categories-grid">
             <div class="category-card reveal" data-category="pedreiro">
-              <img
-                src="https://i.ibb.co/v4Lc5CqX/pedreiro.png"
-                alt="Pedreiro"
-              />
+              <img src="https://i.ibb.co/v4Lc5CqX/pedreiro.png" alt="Pedreiro" />
               <div class="name">Pedreiro</div>
-              <div class="desc">Construção e reforma</div>
+              <div class="desc">Construção, hidráulica e reforma</div>
             </div>
             <div class="category-card reveal" data-category="pintor">
               <img src="https://i.ibb.co/DnQ8FCN/pintor.png" alt="Pintor" />
@@ -3769,20 +3776,14 @@
               <div class="desc">Acabamento e cor</div>
             </div>
             <div class="category-card reveal" data-category="eletricista">
-              <img
-                src="https://i.ibb.co/Fq0yjsPK/eletricista.png"
-                alt="Eletricista"
-              />
+              <img src="https://i.ibb.co/Fq0yjsPK/eletricista.png" alt="Eletricista" />
               <div class="name">Eletricista</div>
-              <div class="desc">Instalações elétricas</div>
+              <div class="desc">Elétrica e refrigeração</div>
             </div>
-            <div class="category-card reveal" data-category="encanador">
-              <img
-                src="https://i.ibb.co/1fP5St02/encanador.png"
-                alt="Encanador"
-              />
-              <div class="name">Encanador</div>
-              <div class="desc">Hidráulica e tubulações</div>
+            <div class="category-card reveal" data-category="manutencao">
+              <img src="https://i.ibb.co/1fP5St02/encanador.png" alt="Manutenção Predial" />
+              <div class="name">Manutenção Predial</div>
+              <div class="desc">Reparos e pequenas obras</div>
             </div>
             <div class="category-card reveal" data-category="gesseiro">
               <img
@@ -3793,12 +3794,14 @@
               <div class="desc">Drywall e forro</div>
             </div>
             <div class="category-card reveal" data-category="serralheiro">
-              <img
-                src="https://i.ibb.co/tw2rMy8z/Lixadeira.png"
-                alt="Serralheiro"
-              />
-              <div class="name">Serralheiro</div>
-              <div class="desc">Estruturas metálicas</div>
+              <img src="https://i.ibb.co/tw2rMy8z/Lixadeira.png" alt="Soldador" />
+              <div class="name">Soldador</div>
+              <div class="desc">Serralheria e estruturas metálicas</div>
+            </div>
+            <div class="category-card reveal" data-category="telhadista">
+              <img src="https://i.ibb.co/CKYt8Vh3/Cortador-de-azulejos-industrial-colorido.png" alt="Telhadista" />
+              <div class="name">Telhadista</div>
+              <div class="desc">Coberturas e telhados</div>
             </div>
           </div>
         </div>
@@ -3888,485 +3891,246 @@
             </p>
           </div>
           <div class="professionals-grid" id="professionalsGrid">
-            <!-- CARD 1 - Carlos Souza - Pedreiro -->
-            <div class="professional-card reveal" data-category="pedreiro">
-              <img
-                src="https://i.ibb.co/G4qKJ66q/Profissional-2.png"
-                alt="Foto de Carlos Souza"
-                class="avatar"
-                loading="lazy"
-              />
+            <!-- CARD 1 - Ronaldo Coelho - Pedreiro -->
+            <div class="professional-card reveal" data-category="pedreiro telhadista eletricista">
+              <img src="https://i.ibb.co/G4qKJ66q/Profissional-2.png" alt="Foto de Ronaldo Coelho" class="avatar" loading="lazy" />
               <div class="info">
-                <div class="name">Carlos Souza</div>
-                <div class="profession">Pedreiro</div>
+                <div class="name">Ronaldo Coelho</div>
+                <div class="profession">Pedreiro / Telhadista / Eletricista / Carpinteiro</div>
                 <div class="location">
                   <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
-                  Vitória da Conquista - BA
+                  Poções - BA e região
                 </div>
                 <div class="tags">
                   <span>Alvenaria</span>
-                  <span>Reformas</span>
-                  <span>Acabamentos</span>
+                  <span>Hidráulica</span>
+                  <span>Pisos e Porcelanatos</span>
                 </div>
                 <div class="actions">
-                  <button
-                    class="btn btn-outline ver-perfil"
-                    onclick="openProfile('1')"
-                    style="flex: 1"
-                  >
-                    Ver perfil
-                  </button>
-                  <a
-                    href="https://wa.me/5577999999999?text=Olá%20Carlos!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento."
-                    class="btn btn-success"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
-                      alt="WhatsApp"
-                      style="
-                        width: 20px;
-                        height: 20px;
-                        filter: brightness(0) invert(1);
-                      "
-                    />
+                  <button class="btn btn-outline ver-perfil" onclick="openProfile('1')" style="flex: 1">Ver perfil</button>
+                  <a href="https://wa.me/5577999999999?text=Ol%C3%A1%20Ronaldo%21%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Constru%C3%A7%C3%A3o%20Civil%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="btn btn-success" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp" style="width: 20px; height: 20px; filter: brightness(0) invert(1);" />
                   </a>
                 </div>
               </div>
             </div>
 
-            <!-- CARD 2 - Mariano Alves - Pintor -->
-            <div class="professional-card reveal" data-category="pintor">
-              <img
-                src="https://i.ibb.co/fdswpV66/Profissional-3.png"
-                alt="Foto de Mariano Alves"
-                class="avatar"
-                loading="lazy"
-              />
+            <!-- CARD 2 - Leonardo - Pedreiro -->
+            <div class="professional-card reveal" data-category="pedreiro">
+              <img src="https://i.ibb.co/4nZxBhp6/Profissional-10.png" alt="Foto de Leonardo" class="avatar" loading="lazy" />
               <div class="info">
-                <div class="name">Mariano Alves</div>
+                <div class="name">Leonardo</div>
+                <div class="profession">Pedreiro</div>
+                <div class="location">
+                  <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
+                  Poções - BA e região
+                </div>
+                <div class="tags">
+                  <span>Alvenaria</span>
+                  <span>Hidráulica</span>
+                  <span>Revestimentos</span>
+                </div>
+                <div class="actions">
+                  <button class="btn btn-outline ver-perfil" onclick="openProfile('2')" style="flex: 1">Ver perfil</button>
+                  <a href="https://wa.me/5577999999999?text=Ol%C3%A1%20Leonardo%21%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Constru%C3%A7%C3%A3o%20Civil%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="btn btn-success" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp" style="width: 20px; height: 20px; filter: brightness(0) invert(1);" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 3 - Hernandes Amorim - Pedreiro -->
+            <div class="professional-card reveal" data-category="pedreiro telhadista">
+              <img src="https://i.ibb.co/7tsWW8Qh/Profissional-5.png" alt="Foto de Hernandes Amorim" class="avatar" loading="lazy" />
+              <div class="info">
+                <div class="name">Hernandes Amorim</div>
+                <div class="profession">Pedreiro / Carpinteiro / Telhadista</div>
+                <div class="location">
+                  <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
+                  Poções - BA e região
+                </div>
+                <div class="tags">
+                  <span>Alvenaria</span>
+                  <span>Hidráulica</span>
+                  <span>Carpintaria</span>
+                </div>
+                <div class="actions">
+                  <button class="btn btn-outline ver-perfil" onclick="openProfile('3')" style="flex: 1">Ver perfil</button>
+                  <a href="https://wa.me/5577999999999?text=Ol%C3%A1%20Hernandes%21%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Constru%C3%A7%C3%A3o%20Civil%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="btn btn-success" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp" style="width: 20px; height: 20px; filter: brightness(0) invert(1);" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 4 - Aerico - Soldador -->
+            <div class="professional-card reveal" data-category="serralheiro">
+              <img src="https://i.ibb.co/5x933kfF/Profissional-9.png" alt="Foto de Aerico" class="avatar" loading="lazy" />
+              <div class="info">
+                <div class="name">Aerico</div>
+                <div class="profession">Soldador</div>
+                <div class="location">
+                  <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
+                  Poções - BA e região
+                </div>
+                <div class="tags">
+                  <span>Serralheria</span>
+                  <span>Soldagem</span>
+                  <span>Estruturas Metálicas</span>
+                </div>
+                <div class="actions">
+                  <button class="btn btn-outline ver-perfil" onclick="openProfile('4')" style="flex: 1">Ver perfil</button>
+                  <a href="https://wa.me/5577999999999?text=Ol%C3%A1%20Aerico%21%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Constru%C3%A7%C3%A3o%20Civil%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="btn btn-success" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp" style="width: 20px; height: 20px; filter: brightness(0) invert(1);" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 5 - Adiel Meira - Técnico em Manutenção Predial -->
+            <div class="professional-card reveal" data-category="manutencao">
+              <img src="https://i.ibb.co/21TGSxML/Profissional-1.png" alt="Foto de Adiel Meira" class="avatar" loading="lazy" />
+              <div class="info">
+                <div class="name">Adiel Meira</div>
+                <div class="profession">Técnico em Manutenção Predial</div>
+                <div class="location">
+                  <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
+                  Poções - BA e região
+                </div>
+                <div class="tags">
+                  <span>Manutenção Predial</span>
+                  <span>Reparos Hidráulicos</span>
+                  <span>Elétrica Básica</span>
+                </div>
+                <div class="actions">
+                  <button class="btn btn-outline ver-perfil" onclick="openProfile('5')" style="flex: 1">Ver perfil</button>
+                  <a href="https://wa.me/5577999999999?text=Ol%C3%A1%20Adiel%21%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Constru%C3%A7%C3%A3o%20Civil%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="btn btn-success" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp" style="width: 20px; height: 20px; filter: brightness(0) invert(1);" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 6 - Neto Novais - Telhadista -->
+            <div class="professional-card reveal" data-category="telhadista">
+              <img src="https://i.ibb.co/jvMmJZvk/Profissional-8.png" alt="Foto de Neto Novais" class="avatar" loading="lazy" />
+              <div class="info">
+                <div class="name">Neto Novais</div>
+                <div class="profession">Telhadista</div>
+                <div class="location">
+                  <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
+                  Poções - BA e região
+                </div>
+                <div class="tags">
+                  <span>Telhados</span>
+                  <span>Calhas</span>
+                  <span>Coberturas</span>
+                </div>
+                <div class="actions">
+                  <button class="btn btn-outline ver-perfil" onclick="openProfile('6')" style="flex: 1">Ver perfil</button>
+                  <a href="https://wa.me/5577999999999?text=Ol%C3%A1%20Neto%21%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Constru%C3%A7%C3%A3o%20Civil%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="btn btn-success" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp" style="width: 20px; height: 20px; filter: brightness(0) invert(1);" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 7 - Ibraim - Técnico em Refrigeração e Elétrica -->
+            <div class="professional-card reveal" data-category="eletricista">
+              <img src="https://i.ibb.co/hx9Qn0tC/Profissional-4.png" alt="Foto de Ibraim" class="avatar" loading="lazy" />
+              <div class="info">
+                <div class="name">Ibraim</div>
+                <div class="profession">Técnico em Refrigeração e Elétrica</div>
+                <div class="location">
+                  <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
+                  Poções - BA e região
+                </div>
+                <div class="tags">
+                  <span>Ar-condicionado</span>
+                  <span>Instalações Elétricas</span>
+                  <span>Quadros QDC</span>
+                </div>
+                <div class="actions">
+                  <button class="btn btn-outline ver-perfil" onclick="openProfile('7')" style="flex: 1">Ver perfil</button>
+                  <a href="https://wa.me/5577999999999?text=Ol%C3%A1%20Ibraim%21%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Constru%C3%A7%C3%A3o%20Civil%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="btn btn-success" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp" style="width: 20px; height: 20px; filter: brightness(0) invert(1);" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 8 - Alexsandro - Pintor -->
+            <div class="professional-card reveal" data-category="pintor">
+              <img src="https://i.ibb.co/fdswpV66/Profissional-3.png" alt="Foto de Alexsandro" class="avatar" loading="lazy" />
+              <div class="info">
+                <div class="name">Alexsandro</div>
                 <div class="profession">Pintor</div>
                 <div class="location">
                   <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
-                  Vitória da Conquista - BA
+                  Poções - BA e região
                 </div>
                 <div class="tags">
                   <span>Pintura Residencial</span>
-                  <span>Texturização</span>
-                  <span>Acabamento</span>
+                  <span>Massa Corrida</span>
+                  <span>Texturas</span>
                 </div>
                 <div class="actions">
-                  <button
-                    class="btn btn-outline ver-perfil"
-                    onclick="openProfile('2')"
-                    style="flex: 1"
-                  >
-                    Ver perfil
-                  </button>
-                  <a
-                    href="https://wa.me/5577999999999?text=Olá%20Mariano!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento."
-                    class="btn btn-success"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
-                      alt="WhatsApp"
-                      style="
-                        width: 20px;
-                        height: 20px;
-                        filter: brightness(0) invert(1);
-                      "
-                    />
+                  <button class="btn btn-outline ver-perfil" onclick="openProfile('8')" style="flex: 1">Ver perfil</button>
+                  <a href="https://wa.me/5577999999999?text=Ol%C3%A1%20Alexsandro%21%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Constru%C3%A7%C3%A3o%20Civil%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="btn btn-success" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp" style="width: 20px; height: 20px; filter: brightness(0) invert(1);" />
                   </a>
                 </div>
               </div>
             </div>
 
-            <!-- CARD 3 - Roberto Silva - Eletricista -->
-            <div class="professional-card reveal" data-category="eletricista">
-              <img
-                src="https://i.ibb.co/21TGSxML/Profissional-1.png"
-                alt="Foto de Roberto Silva"
-                class="avatar"
-                loading="lazy"
-              />
+            <!-- CARD 9 - Mateus Meira - Pintor -->
+            <div class="professional-card reveal" data-category="pintor">
+              <img src="https://i.ibb.co/0V6hwQQD/Profissional-7.png" alt="Foto de Mateus Meira" class="avatar" loading="lazy" />
               <div class="info">
-                <div class="name">Roberto Silva</div>
-                <div class="profession">Eletricista</div>
+                <div class="name">Mateus Meira</div>
+                <div class="profession">Pintor</div>
                 <div class="location">
                   <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
-                  Vitória da Conquista - BA
+                  Poções - BA e região
                 </div>
                 <div class="tags">
-                  <span>Instalações Elétricas</span>
-                  <span>Automação</span>
-                  <span>Manutenção</span>
+                  <span>Pintura Residencial</span>
+                  <span>Massa Corrida</span>
+                  <span>Texturas</span>
                 </div>
                 <div class="actions">
-                  <button
-                    class="btn btn-outline ver-perfil"
-                    onclick="openProfile('3')"
-                    style="flex: 1"
-                  >
-                    Ver perfil
-                  </button>
-                  <a
-                    href="https://wa.me/5577999999999?text=Olá%20Roberto!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento."
-                    class="btn btn-success"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
-                      alt="WhatsApp"
-                      style="
-                        width: 20px;
-                        height: 20px;
-                        filter: brightness(0) invert(1);
-                      "
-                    />
+                  <button class="btn btn-outline ver-perfil" onclick="openProfile('9')" style="flex: 1">Ver perfil</button>
+                  <a href="https://wa.me/5577999999999?text=Ol%C3%A1%20Mateus%21%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Constru%C3%A7%C3%A3o%20Civil%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="btn btn-success" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp" style="width: 20px; height: 20px; filter: brightness(0) invert(1);" />
                   </a>
                 </div>
               </div>
             </div>
 
-            <!-- CARD 4 - Fernando Lima - Encanador -->
-            <div class="professional-card reveal" data-category="encanador">
-              <img
-                src="https://i.ibb.co/7tsWW8Qh/Profissional-5.png"
-                alt="Foto de Fernando Lima"
-                class="avatar"
-                loading="lazy"
-              />
-              <div class="info">
-                <div class="name">Fernando Lima</div>
-                <div class="profession">Encanador</div>
-                <div class="location">
-                  <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
-                  Vitória da Conquista - BA
-                </div>
-                <div class="tags">
-                  <span>Hidráulica</span>
-                  <span>Reformas</span>
-                  <span>Manutenção</span>
-                </div>
-                <div class="actions">
-                  <button
-                    class="btn btn-outline ver-perfil"
-                    onclick="openProfile('4')"
-                    style="flex: 1"
-                  >
-                    Ver perfil
-                  </button>
-                  <a
-                    href="https://wa.me/5577999999999?text=Olá%20Fernando!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento."
-                    class="btn btn-success"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
-                      alt="WhatsApp"
-                      style="
-                        width: 20px;
-                        height: 20px;
-                        filter: brightness(0) invert(1);
-                      "
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- CARD 5 - André Santos - Gesseiro -->
+            <!-- CARD 10 - Dário de Jesus - Gesseiro / Drywall -->
             <div class="professional-card reveal" data-category="gesseiro">
-              <img
-                src="https://i.ibb.co/zh8CTHqy/Profissional-6.png"
-                alt="Foto de André Santos"
-                class="avatar"
-                loading="lazy"
-              />
+              <img src="https://i.ibb.co/zh8CTHqy/Profissional-6.png" alt="Foto de Dário de Jesus" class="avatar" loading="lazy" />
               <div class="info">
-                <div class="name">André Santos</div>
-                <div class="profession">Gesseiro</div>
+                <div class="name">Dário de Jesus</div>
+                <div class="profession">Gesseiro / Drywall</div>
                 <div class="location">
                   <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
-                  Vitória da Conquista - BA
-                </div>
-                <div class="tags">
-                  <span>Drywall</span>
-                  <span>Forros de Gesso</span>
-                  <span>Acabamentos</span>
-                </div>
-                <div class="actions">
-                  <button
-                    class="btn btn-outline ver-perfil"
-                    onclick="openProfile('5')"
-                    style="flex: 1"
-                  >
-                    Ver perfil
-                  </button>
-                  <a
-                    href="https://wa.me/5577999999999?text=Olá%20André!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento."
-                    class="btn btn-success"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
-                      alt="WhatsApp"
-                      style="
-                        width: 20px;
-                        height: 20px;
-                        filter: brightness(0) invert(1);
-                      "
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- CARD 6 - Paulo Mendes - Serralheiro -->
-            <div class="professional-card reveal" data-category="serralheiro">
-              <img
-                src="https://i.ibb.co/5x933kfF/Profissional-9.png"
-                alt="Foto de Paulo Mendes"
-                class="avatar"
-                loading="lazy"
-              />
-              <div class="info">
-                <div class="name">Paulo Mendes</div>
-                <div class="profession">Serralheiro</div>
-                <div class="location">
-                  <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
-                  Vitória da Conquista - BA
-                </div>
-                <div class="tags">
-                  <span>Estruturas Metálicas</span>
-                  <span>Portões</span>
-                  <span>Grades</span>
-                </div>
-                <div class="actions">
-                  <button
-                    class="btn btn-outline ver-perfil"
-                    onclick="openProfile('6')"
-                    style="flex: 1"
-                  >
-                    Ver perfil
-                  </button>
-                  <a
-                    href="https://wa.me/5577999999999?text=Olá%20Paulo!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento."
-                    class="btn btn-success"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
-                      alt="WhatsApp"
-                      style="
-                        width: 20px;
-                        height: 20px;
-                        filter: brightness(0) invert(1);
-                      "
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- CARD 7 - João Oliveira - Serralheiro (segundo serralheiro) -->
-            <div class="professional-card reveal" data-category="serralheiro">
-              <img
-                src="https://i.ibb.co/jvMmJZvk/Profissional-8.png"
-                alt="Foto de João Oliveira"
-                class="avatar"
-                loading="lazy"
-              />
-              <div class="info">
-                <div class="name">João Oliveira</div>
-                <div class="profession">Serralheiro</div>
-                <div class="location">
-                  <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
-                  Vitória da Conquista - BA
-                </div>
-                <div class="tags">
-                  <span>Esquadrias</span>
-                  <span>Estruturas</span>
-                  <span>Projetos Personalizados</span>
-                </div>
-                <div class="actions">
-                  <button
-                    class="btn btn-outline ver-perfil"
-                    onclick="openProfile('7')"
-                    style="flex: 1"
-                  >
-                    Ver perfil
-                  </button>
-                  <a
-                    href="https://wa.me/5577999999999?text=Olá%20João!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento."
-                    class="btn btn-success"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
-                      alt="WhatsApp"
-                      style="
-                        width: 20px;
-                        height: 20px;
-                        filter: brightness(0) invert(1);
-                      "
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- CARD 8 - Antônio Rocha - Pedreiro (segundo pedreiro) -->
-            <div class="professional-card reveal" data-category="pedreiro">
-              <img
-                src="https://i.ibb.co/4nZxBhp6/Profissional-10.png"
-                alt="Foto de Antônio Rocha"
-                class="avatar"
-                loading="lazy"
-              />
-              <div class="info">
-                <div class="name">Antônio Rocha</div>
-                <div class="profession">Pedreiro</div>
-                <div class="location">
-                  <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
-                  Vitória da Conquista - BA
-                </div>
-                <div class="tags">
-                  <span>Construção</span>
-                  <span>Reforma</span>
-                  <span>Alvenaria</span>
-                </div>
-                <div class="actions">
-                  <button
-                    class="btn btn-outline ver-perfil"
-                    onclick="openProfile('8')"
-                    style="flex: 1"
-                  >
-                    Ver perfil
-                  </button>
-                  <a
-                    href="https://wa.me/5577999999999?text=Olá%20Antônio!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento."
-                    class="btn btn-success"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
-                      alt="WhatsApp"
-                      style="
-                        width: 20px;
-                        height: 20px;
-                        filter: brightness(0) invert(1);
-                      "
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- CARD 9 - Ricardo Mota - Eletricista (segundo eletricista) -->
-            <div class="professional-card reveal" data-category="eletricista">
-              <img
-                src="https://i.ibb.co/hx9Qn0tC/Profissional-4.png"
-                alt="Foto de Ricardo Mota"
-                class="avatar"
-                loading="lazy"
-              />
-              <div class="info">
-                <div class="name">Ricardo Mota</div>
-                <div class="profession">Eletricista</div>
-                <div class="location">
-                  <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
-                  Vitória da Conquista - BA
-                </div>
-                <div class="tags">
-                  <span>Instalações</span>
-                  <span>Manutenção</span>
-                  <span>Projetos Elétricos</span>
-                </div>
-                <div class="actions">
-                  <button
-                    class="btn btn-outline ver-perfil"
-                    onclick="openProfile('9')"
-                    style="flex: 1"
-                  >
-                    Ver perfil
-                  </button>
-                  <a
-                    href="https://wa.me/5577999999999?text=Olá%20Ricardo!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento."
-                    class="btn btn-success"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
-                      alt="WhatsApp"
-                      style="
-                        width: 20px;
-                        height: 20px;
-                        filter: brightness(0) invert(1);
-                      "
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- CARD 10 - Gabriel Freitas - Gesseiro (segundo gesseiro) -->
-            <div class="professional-card reveal" data-category="gesseiro">
-              <img
-                src="https://i.ibb.co/0V6hwQQD/Profissional-7.png"
-                alt="Foto de Gabriel Freitas"
-                class="avatar"
-                loading="lazy"
-              />
-              <div class="info">
-                <div class="name">Gabriel Freitas</div>
-                <div class="profession">Gesseiro</div>
-                <div class="location">
-                  <img src="https://i.ibb.co/LWxyZK0/icon-4.png" alt="Local" />
-                  Vitória da Conquista - BA
+                  Poções - BA e região
                 </div>
                 <div class="tags">
                   <span>Drywall</span>
                   <span>Sancas</span>
-                  <span>Revestimentos</span>
+                  <span>Divisórias</span>
                 </div>
                 <div class="actions">
-                  <button
-                    class="btn btn-outline ver-perfil"
-                    onclick="openProfile('10')"
-                    style="flex: 1"
-                  >
-                    Ver perfil
-                  </button>
-                  <a
-                    href="https://wa.me/5577999999999?text=Olá%20Gabriel!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento."
-                    class="btn btn-success"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
-                      alt="WhatsApp"
-                      style="
-                        width: 20px;
-                        height: 20px;
-                        filter: brightness(0) invert(1);
-                      "
-                    />
+                  <button class="btn btn-outline ver-perfil" onclick="openProfile('10')" style="flex: 1">Ver perfil</button>
+                  <a href="https://wa.me/5577999999999?text=Ol%C3%A1%20D%C3%A1rio%21%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Constru%C3%A7%C3%A3o%20Civil%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="btn btn-success" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp" style="width: 20px; height: 20px; filter: brightness(0) invert(1);" />
                   </a>
                 </div>
               </div>
             </div>
+
           </div>
           <p
             style="
@@ -4376,7 +4140,8 @@
               color: var(--gray-600);
             "
           >
-            * Dados demonstrativos.
+            * Dados demonstrativos. Profissionais selecionados pela equipe Hub
+            Digital.
           </p>
         </div>
       </section>
@@ -4468,7 +4233,7 @@
               />
               <div class="overlay">
                 <h3 class="h3">Instalação Hidráulica</h3>
-                <span class="small">Encanador</span>
+                <span class="small">Pedreiro</span>
                 <button
                   class="btn btn-white ver-projeto"
                   onclick="openProjectModal('Instalação Hidráulica')"
@@ -4502,7 +4267,7 @@
               />
               <div class="overlay">
                 <h3 class="h3">Churrasqueira de Ferro</h3>
-                <span class="small">Serralheiro</span>
+                <span class="small">Soldador</span>
                 <button
                   class="btn btn-white ver-projeto"
                   onclick="openProjectModal('Churrasqueira de Ferro')"
@@ -5038,7 +4803,7 @@
 
           Serviços
 
-          <span class="badge">
+          <span class="badge" id="servicesBadge">
             4
           </span>
 
@@ -5095,7 +4860,7 @@
               </p>
 
               <h3 style="margin-top: 24px">
-                Experiência e Formação
+                Áreas de atuação
               </h3>
 
               <p id="profileFormacao">
@@ -5155,7 +4920,7 @@
                     aria-hidden="true"
                   />
 
-                  Experiência
+                  Atuação
 
                 </span>
 
@@ -5386,13 +5151,13 @@
         >contato@hubconstrucao.com.br</a
       >
       <span style="font-size: 14px; display: block; margin-top: 4px"
-        >Vitória da Conquista - BA</span
+        >Poções - BA e região</span
       >
     </div>
 
     <div class="footer-bottom">
       <span>Projeto de Extensão — Inovação e Empreendedorismo</span>
-      <span>Vitória da Conquista - BA | 2026</span>
+      <span>Poções - BA e região | 2026</span>
     </div>
   </div>
 </footer>
@@ -5542,7 +5307,7 @@
         {
           titulo: "Pintura de Interiores",
           categoria: "Pintura",
-          profissionalId: "2",
+          profissionalId: "8",
           duracao: "8 dias",
           descricao:
             "Pintura completa de ambientes internos, com preparo de superfície, aplicação de massa corrida e acabamento premium.",
@@ -5556,7 +5321,7 @@
         {
           titulo: "Pintura de Fachada",
           categoria: "Pintura",
-          profissionalId: "2",
+          profissionalId: "8",
           duracao: "12 dias",
           descricao:
             "Pintura de fachada externa com tinta impermeabilizante de alta resistência a intempéries e raios UV.",
@@ -5570,7 +5335,7 @@
         {
           titulo: "Texturização Decorativa",
           categoria: "Acabamento",
-          profissionalId: "2",
+          profissionalId: "9",
           duracao: "10 dias",
           descricao:
             "Aplicação de textura decorativa em paredes internas, criando relevo e personalidade para o ambiente.",
@@ -5584,7 +5349,7 @@
         {
           titulo: "Efeito Cimento Queimado",
           categoria: "Acabamento",
-          profissionalId: "2",
+          profissionalId: "9",
           duracao: "9 dias",
           descricao:
             "Acabamento em efeito cimento queimado, trazendo visual industrial moderno para paredes e superfícies.",
@@ -5598,7 +5363,7 @@
         {
           titulo: "Instalação Elétrica",
           categoria: "Elétrica",
-          profissionalId: "3",
+          profissionalId: "7",
           duracao: "20 dias",
           descricao:
             "Instalação elétrica completa para residência de 150m², com quadro de distribuição, circuitos independentes e pontos de força.",
@@ -5612,7 +5377,7 @@
         {
           titulo: "Automação Residencial",
           categoria: "Automação",
-          profissionalId: "3",
+          profissionalId: "7",
           duracao: "15 dias",
           descricao:
             "Projeto de automação residencial com controle inteligente de iluminação, portões e climatização via aplicativo.",
@@ -5626,7 +5391,7 @@
         {
           titulo: "Iluminação LED",
           categoria: "Iluminação",
-          profissionalId: "3",
+          profissionalId: "7",
           duracao: "6 dias",
           descricao:
             "Projeto e instalação de iluminação em LED com foco em eficiência energética e valorização dos ambientes.",
@@ -5640,7 +5405,7 @@
         {
           titulo: "SPDA Residencial",
           categoria: "Segurança",
-          profissionalId: "3",
+          profissionalId: "7",
           duracao: "7 dias",
           descricao:
             "Instalação de Sistema de Proteção contra Descargas Atmosféricas (SPDA), garantindo segurança da edificação.",
@@ -5654,7 +5419,7 @@
         {
           titulo: "Instalação Hidráulica",
           categoria: "Hidráulica",
-          profissionalId: "4",
+          profissionalId: "3",
           duracao: "16 dias",
           descricao:
             "Instalação completa de sistema hidráulico com tubulações de PVC e PPR de alta durabilidade.",
@@ -5668,7 +5433,7 @@
         {
           titulo: "Reparo de Vazamentos",
           categoria: "Manutenção",
-          profissionalId: "4",
+          profissionalId: "3",
           duracao: "2 dias",
           descricao:
             "Localização e reparo de vazamentos ocultos com mínima intervenção em paredes e pisos.",
@@ -5682,7 +5447,7 @@
 {
   titulo: "Desentupimento de Pia",
   categoria: "Hidráulica",
-  profissionalId: "4",
+  profissionalId: "3",
   duracao: "1 dia",
   descricao:
     "Serviço de desentupimento de pia, com identificação da obstrução, limpeza da tubulação e testes para garantir o correto escoamento da água.",
@@ -5696,7 +5461,7 @@
        {
   titulo: "Instalação de Torneira e Sifão",
   categoria: "Hidráulica",
-  profissionalId: "4",
+  profissionalId: "3",
   duracao: "1 dia",
   descricao:
     "Instalação ou substituição de torneiras, sifões e conexões hidráulicas em cozinhas, banheiros e áreas de serviço, com testes para verificar possíveis vazamentos.",
@@ -5710,7 +5475,7 @@
         {
           titulo: "Forro de Gesso",
           categoria: "Acabamento",
-          profissionalId: "5",
+          profissionalId: "10",
           duracao: "5 dias",
           descricao:
             "Instalação de forro de gesso liso com design moderno e acabamento impecável.",
@@ -5724,7 +5489,7 @@
         {
           titulo: "Instalação de Drywall",
           categoria: "Construção",
-          profissionalId: "5",
+          profissionalId: "10",
           duracao: "7 dias",
           descricao:
             "Montagem de paredes em drywall para divisão de ambientes, com isolamento acústico e acabamento fino.",
@@ -5738,7 +5503,7 @@
         {
           titulo: "Sanca de Gesso",
           categoria: "Acabamento",
-          profissionalId: "5",
+          profissionalId: "10",
           duracao: "4 dias",
           descricao:
             "Execução de sanca de gesso com iluminação indireta embutida, valorizando o pé-direito do ambiente.",
@@ -5752,7 +5517,7 @@
         {
           titulo: "Divisória de Gesso",
           categoria: "Construção",
-          profissionalId: "5",
+          profissionalId: "10",
           duracao: "6 dias",
           descricao:
             "Instalação de divisória em gesso acartonado para criação de novos ambientes internos.",
@@ -5766,7 +5531,7 @@
  {
   titulo: "Portão de Ferro",
   categoria: "Portões e Grades",
-  profissionalId: "6",
+  profissionalId: "4",
   duracao: "4 dias",
   descricao:
     "Fabricação e instalação de portão de ferro sob medida para entrada de garagem, com preparação para pintura.",
@@ -5780,7 +5545,7 @@
 {
   titulo: "Grade para Janela",
   categoria: "Portões e Grades",
-  profissionalId: "6",
+  profissionalId: "4",
   duracao: "2 dias",
   descricao:
     "Fabricação e instalação de grades de ferro sob medida para janelas, oferecendo mais segurança para a residência.",
@@ -5794,7 +5559,7 @@
 {
   titulo: "Corrimão de Ferro",
   categoria: "Portões e Grades",
-  profissionalId: "6",
+  profissionalId: "4",
   duracao: "2 dias",
   descricao:
     "Fabricação e instalação de corrimão de ferro sob medida para escadas, áreas externas e entradas de residências.",
@@ -5822,7 +5587,7 @@
 {
   titulo: "Portão Basculante",
   categoria: "Portões e Grades",
-  profissionalId: "7",
+  profissionalId: "4",
   duracao: "5 dias",
   descricao:
     "Fabricação e instalação de portão basculante de ferro para garagem residencial, com estrutura reforçada e acabamento para pintura.",
@@ -5836,7 +5601,7 @@
 {
   titulo: "Porta de Ferro",
   categoria: "Portões e Grades",
-  profissionalId: "7",
+  profissionalId: "4",
   duracao: "3 dias",
   descricao:
     "Fabricação e instalação de porta de ferro sob medida para entrada de casa, área de serviço ou acesso externo.",
@@ -5850,7 +5615,7 @@
 {
   titulo: "Churrasqueira de Ferro",
   categoria: "Estruturas Metálicas",
-  profissionalId: "7",
+  profissionalId: "4",
   duracao: "3 dias",
   descricao:
     "Fabricação de churrasqueira em estrutura metálica sob medida para área externa, varanda ou espaço de lazer.",
@@ -5864,7 +5629,7 @@
         {
           titulo: "Janela de Alumínio",
           categoria: "Esquadrias",
-          profissionalId: "7",
+          profissionalId: "4",
           duracao: "5 dias",
           descricao:
             "Instalação de janelas de alumínio de correr com vidro temperado e vedação acústica.",
@@ -5878,7 +5643,7 @@
         {
           titulo: "Construção de Muro",
           categoria: "Construção",
-          profissionalId: "8",
+          profissionalId: "2",
           duracao: "12 dias",
           descricao:
             "Construção de muro de divisa em alvenaria com fundação em sapata corrida.",
@@ -5893,7 +5658,7 @@
         {
           titulo: "Reforma de Banheiro Compacto",
           categoria: "Reforma",
-          profissionalId: "8",
+          profissionalId: "2",
           duracao: "14 dias",
           descricao:
             "Reforma de banheiro compacto com otimização de espaço, novos revestimentos e louças.",
@@ -5907,7 +5672,7 @@
         {
           titulo: "Laje Maciça",
           categoria: "Construção",
-          profissionalId: "8",
+          profissionalId: "2",
           duracao: "10 dias",
           descricao:
             "Execução de laje maciça de concreto armado com fôrma e escoramento técnico.",
@@ -5921,7 +5686,7 @@
         {
           titulo: "Reforma de Cozinha Planejada",
           categoria: "Reforma",
-          profissionalId: "8",
+          profissionalId: "2",
           duracao: "20 dias",
           descricao:
             "Reforma de cozinha com projeto planejado, novos pontos hidráulicos e revestimentos modernos.",
@@ -5935,7 +5700,7 @@
        {
   titulo: "Instalação de Tomadas e Interruptores",
   categoria: "Instalação",
-  profissionalId: "9",
+  profissionalId: "5",
   duracao: "1 dia",
   descricao:
     "Instalação e substituição de tomadas, interruptores e pontos elétricos em ambientes residenciais, com organização e adequação da fiação.",
@@ -5949,7 +5714,7 @@
 {
   titulo: "Manutenção em Quadro de Distribuição",
   categoria: "Manutenção",
-  profissionalId: "9",
+  profissionalId: "5",
   duracao: "1 dia",
   descricao:
     "Manutenção e organização de quadro de distribuição, incluindo identificação de circuitos, reaperto de conexões e substituição de disjuntores quando necessário.",
@@ -5963,7 +5728,7 @@
 {
   titulo: "Instalação de Chuveiro Elétrico",
   categoria: "Instalação",
-  profissionalId: "9",
+  profissionalId: "5",
   duracao: "1 dia",
   descricao:
     "Instalação ou substituição de chuveiro elétrico, com verificação do circuito, conexões e dispositivos de proteção adequados à instalação.",
@@ -5977,7 +5742,7 @@
 {
   titulo: "Instalação de Iluminação Residencial",
   categoria: "Iluminação",
-  profissionalId: "9",
+  profissionalId: "5",
   duracao: "1 dia",
   descricao:
     "Instalação de luminárias, plafons, spots e outros pontos de iluminação em ambientes residenciais, com acabamento e organização da instalação elétrica.",
@@ -6061,7 +5826,7 @@
             month: "long",
             year: "numeric",
           }),
-          localizacao: "Vitória da Conquista - BA",
+          localizacao: "Poções - BA e região",
           duracao: p.duracao,
           whatsapp:
             "https://wa.me/5577999999999?text=" +
@@ -6081,410 +5846,335 @@
       });
       // ===== DADOS DOS PROFISSIONAIS =====
       const profissionaisData = {
-        1: {
-          nome: "Carlos Souza",
-          profissao: "Pedreiro",
-          categoria: "pedreiro",
-          location: "Vitória da Conquista - BA",
-          tags: [
-            "Alvenaria",
-            "Reformas",
-            "Acabamentos",
-            "Construção",
-            "Fundações",
-            "Estruturas",
-          ],
-          bio: "Sou Carlos Souza, pedreiro com mais de 15 anos de experiência em construção e reforma. Atuo em Vitória da Conquista e região, oferecendo serviços de alta qualidade com compromisso, pontualidade e preço justo. Minha trajetória começou ainda jovem, aprendendo o ofício com meu pai. Ao longo dos anos, me especializei em alvenaria estrutural, acabamentos finos e reformas residenciais. Cada projeto é uma oportunidade de transformar espaços e superar expectativas.",
-          formacao:
-            "🏗️ Técnico em Edificações — IFBA (2012-2014)\n🔨 Especialização em Alvenaria Estrutural — SENAI (2016)\n📐 Curso de Leitura de Projetos — Creasp (2018)",
-          experiencia:
-            "15 anos atuando como pedreiro autônomo, com mais de 200 obras realizadas.",
-          contato: "(77) 99999-9999",
-          email: "carlos@hubconstrucao.com",
-          avatar: "https://i.ibb.co/NfhMXnr/perfil-1.jpg",
-          whatsapp:
-            "https://wa.me/5577999999999?text=Olá%20Carlos!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento.",
-        },
-        2: {
-          nome: "Mariano Alves",
-          profissao: "Pintor",
-          categoria: "pintor",
-          location: "Vitória da Conquista - BA",
-          tags: [
-            "Pintura Residencial",
-            "Texturização",
-            "Acabamento",
-            "Cores",
-            "Revestimentos",
-            "Decoração",
-          ],
-          bio: "Sou Mariano Alves, pintor profissional com especialização em acabamentos decorativos, texturização e cores. Transformo ambientes com criatividade e técnica, utilizando produtos de alta qualidade. Acredito que a pintura é a alma de qualquer espaço, e meu trabalho é trazer vida e personalidade a cada projeto.",
-          formacao:
-            "🎨 Curso de Pintura Decorativa — SENAI (2015)\n🖌️ Especialização em Texturização — Instituto de Artes (2017)\n🎭 Design de Interiores — UFBA (2019)",
-          experiencia:
-            "10 anos atuando como pintor, com mais de 150 projetos realizados.",
-          contato: "(77) 98888-8888",
-          email: "mariano@hubconstrucao.com",
-          avatar: "https://i.ibb.co/GQB8pYy6/perfil-3.jpg",
-          whatsapp:
-            "https://wa.me/5577999999999?text=Olá%20Mariano!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento.",
-        },
-        3: {
-          nome: "Roberto Silva",
-          profissao: "Eletricista",
-          categoria: "eletricista",
-          location: "Vitória da Conquista - BA",
-          tags: [
-            "Instalações Elétricas",
-            "Automação",
-            "Manutenção",
-            "Projetos",
-            "Iluminação",
-            "SPDA",
-          ],
-          bio: "Sou Roberto Silva, eletricista com ampla experiência em instalações residenciais e comerciais. Realizo projetos elétricos, automação, manutenção e reparos com total segurança e dentro das normas técnicas. Minha missão é garantir que cada instalação seja segura, eficiente e duradoura.",
-          formacao:
-            "⚡ Técnico em Eletrotécnica — IFBA (2011)\n🔌 Especialização em Automação — SENAI (2014)\n📋 NR-10 e NR-35 — SEST/SENAT (2016)",
-          experiencia:
-            "14 anos atuando como eletricista, com mais de 300 projetos realizados.",
-          contato: "(77) 97777-7777",
-          email: "roberto@hubconstrucao.com",
-          avatar: "https://i.ibb.co/tMx4YVn1/perfil-4.jpg",
-          whatsapp:
-            "https://wa.me/5577999999999?text=Olá%20Roberto!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento.",
-        },
-        4: {
-          nome: "Fernando Lima",
-          profissao: "Encanador",
-          categoria: "encanador",
-          location: "Vitória da Conquista - BA",
-          tags: [
-            "Hidráulica",
-            "Reformas",
-            "Manutenção",
-            "Instalações",
-            "Vazamentos",
-            "Tubulações",
-          ],
-          bio: "Sou Fernando Lima, encanador com sólida experiência em sistemas hidráulicos. Atuo em reformas, manutenção preventiva e corretiva, instalação de tubulações e soluções para vazamentos com eficiência. Acredito que um bom sistema hidráulico é essencial para o conforto e segurança de qualquer edificação.",
-          formacao:
-            "🔧 Técnico em Hidráulica — SENAI (2013)\n💧 Especialização em Sistemas Prediais — UNIFACS (2016)",
-          experiencia:
-            "12 anos atuando como encanador, com mais de 180 projetos realizados.",
-          contato: "(77) 96666-6666",
-          email: "fernando@hubconstrucao.com",
-          avatar: "https://i.ibb.co/LzdmsCMW/perfil-11.jpg",
-          whatsapp:
-            "https://wa.me/5577999999999?text=Olá%20Fernando!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento.",
-        },
-        5: {
-          nome: "André Santos",
-          profissao: "Gesseiro",
-          categoria: "gesseiro",
-          location: "Vitória da Conquista - BA",
-          tags: [
-            "Drywall",
-            "Forros de Gesso",
-            "Acabamentos",
-            "Sancas",
-            "Revestimentos",
-            "Divisórias",
-          ],
-          bio: "Sou André Santos, especialista em sistemas de drywall, forros de gesso e acabamentos. Trabalho com precisão e rapidez, criando ambientes modernos e funcionais para residências e comércios. Acredito que o gesso é uma arte que transforma espaços com leveza e elegância.",
-          formacao:
-            "🛠️ Curso de Gesso e Drywall — SENAI (2012)\n📐 Especialização em Acabamentos — SENAC (2015)",
-          experiencia:
-            "13 anos atuando como gesseiro, com mais de 220 projetos realizados.",
-          contato: "(77) 95555-5555",
-          email: "andre@hubconstrucao.com",
-          avatar: "https://i.ibb.co/vrMfV5P/perfil-10.jpg",
-          whatsapp:
-            "https://wa.me/5577999999999?text=Olá%20André!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento.",
-        },
-        6: {
-          nome: "Paulo Mendes",
-          profissao: "Serralheiro",
-          categoria: "serralheiro",
-          location: "Vitória da Conquista - BA",
-          tags: [
-            "Estruturas Metálicas",
-            "Portões",
-            "Grades",
-            "Esquadrias",
-            "Projetos Personalizados",
-            "Ferro",
-          ],
-          bio: "Sou Paulo Mendes, serralheiro com mais de 20 anos de experiência. Especialista em estruturas metálicas, portões automatizados, grades, esquadrias e projetos personalizados em ferro e alumínio. Cada peça que produzo é feita com precisão e dedicação, garantindo durabilidade e beleza.",
-          formacao:
-            "🔩 Técnico em Metalurgia — SENAI (2003)\n🏗️ Especialização em Estruturas Metálicas — IFBA (2008)",
-          experiencia:
-            "22 anos atuando como serralheiro, com mais de 350 projetos realizados.",
-          contato: "(77) 94444-4444",
-          email: "paulo@hubconstrucao.com",
-          avatar: "https://i.ibb.co/27XQLmQm/perfil-9.jpg",
-          whatsapp:
-            "https://wa.me/5577999999999?text=Olá%20Paulo!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento.",
-        },
-        7: {
-          nome: "João Oliveira",
-          profissao: "Serralheiro",
-          categoria: "serralheiro",
-          location: "Vitória da Conquista - BA",
-          tags: [
-            "Esquadrias",
-            "Estruturas",
-            "Projetos Personalizados",
-            "Portões",
-            "Grades",
-            "Alumínio",
-          ],
-          bio: "Sou João Oliveira, serralheiro com mais de 18 anos de experiência. Trabalho com estruturas metálicas, portões, grades e esquadrias. Cada projeto é único e feito com atenção a cada detalhe, garantindo qualidade e durabilidade.",
-          formacao:
-            "🔩 Técnico em Metalurgia — SENAI (2005)\n📐 Design de Estruturas — SENAI (2008)",
-          experiencia:
-            "18 anos atuando como serralheiro, com mais de 280 projetos realizados.",
-          contato: "(77) 93333-3333",
-          email: "joao@hubconstrucao.com",
-          avatar: "https://i.ibb.co/7dWcQSF5/perfil-8.jpg",
-          whatsapp:
-            "https://wa.me/5577999999999?text=Olá%20João!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento.",
-        },
-        8: {
-          nome: "Antônio Rocha",
-          profissao: "Pedreiro",
-          categoria: "pedreiro",
-          location: "Vitória da Conquista - BA",
-          tags: [
-            "Construção",
-            "Reforma",
-            "Alvenaria",
-            "Acabamentos",
-            "Lajes",
-            "Estruturas",
-          ],
-          bio: "Sou Antônio Rocha, pedreiro com mais de 20 anos de experiência. Especialista em construção, reformas e alvenaria. Trabalho com qualidade, compromisso e respeito aos prazos. Cada obra é executada com atenção aos detalhes e materiais de primeira linha.",
-          formacao:
-            "🏗️ Técnico em Edificações — IFBA (2003)\n🔨 Especialização em Construção — SENAI (2006)",
-          experiencia:
-            "20 anos atuando como pedreiro, com mais de 350 obras realizadas.",
-          contato: "(77) 92222-2222",
-          email: "antonio@hubconstrucao.com",
-          avatar: "https://i.ibb.co/WWzcG2Lf/perfil-7.jpg",
-          whatsapp:
-            "https://wa.me/5577999999999?text=Olá%20Antônio!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento.",
-        },
-        9: {
-          nome: "Ricardo Mota",
-          profissao: "Eletricista",
-          categoria: "eletricista",
-          location: "Vitória da Conquista - BA",
-          tags: [
-            "Instalações",
-            "Manutenção",
-            "Projetos Elétricos",
-            "Iluminação",
-            "Automação",
-            "SPDA",
-          ],
-          bio: "Sou Ricardo Mota, eletricista com mais de 15 anos de experiência. Atuo com instalação, manutenção e projetos elétricos residenciais e comerciais. Minha missão é garantir segurança e eficiência em cada serviço realizado.",
-          formacao:
-            "⚡ Técnico em Eletrotécnica — IFBA (2008)\n📋 NR-10 e NR-35 — SEST/SENAT (2010)",
-          experiencia:
-            "15 anos atuando como eletricista, com mais de 400 atendimentos realizados.",
-          contato: "(77) 91111-1111",
-          email: "ricardo@hubconstrucao.com",
-          avatar: "https://i.ibb.co/ymS39bPp/perfil-6.jpg",
-          whatsapp:
-            "https://wa.me/5577999999999?text=Olá%20Ricardo!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento.",
-        },
-        10: {
-          nome: "Gabriel Freitas",
-          profissao: "Gesseiro",
-          categoria: "gesseiro",
-          location: "Vitória da Conquista - BA",
-          tags: [
-            "Drywall",
-            "Sancas",
-            "Revestimentos",
-            "Forros",
-            "Acabamentos",
-            "Divisórias",
-          ],
-          bio: "Sou Gabriel Freitas, gesseiro com mais de 12 anos de experiência. Especialista em drywall, forros de gesso, sancas e acabamentos. Trabalho com precisão e criatividade, transformando ambientes com qualidade e rapidez.",
-          formacao:
-            "🛠️ Curso de Gesso e Drywall — SENAI (2010)\n📐 Especialização em Acabamentos — SENAC (2013)",
-          experiencia:
-            "12 anos atuando como gesseiro, com mais de 200 projetos realizados.",
-          contato: "(77) 90000-0000",
-          email: "gabriel@hubconstrucao.com",
-          avatar: "https://i.ibb.co/YTbYPQdj/perfil-5.jpg",
-          whatsapp:
-            "https://wa.me/5577999999999?text=Olá%20Gabriel!%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Construção%20Civil%20e%20gostaria%20de%20solicitar%20um%20orçamento.",
-        },
-      };
+  "1": {
+    "nome": "Ronaldo Coelho",
+    "profissao": "Pedreiro (Construção, Hidráulica e Revestimentos)",
+    "categoria": "pedreiro",
+    "categorias": ["pedreiro", "telhadista", "eletricista"],
+    "categoriaLabel": "Pedreiro / Telhadista / Eletricista / Carpinteiro",
+    "location": "Poções - BA e região",
+    "tags": [
+      "Alvenaria",
+      "Concretagem",
+      "Contrapiso",
+      "Hidráulica",
+      "Pisos e Porcelanatos",
+      "Telhados",
+      "Elétrica",
+      "Carpintaria"
+    ],
+    "bio": "Profissional completo para obras residenciais e comerciais, atuando do alicerce ao acabamento. Executa alvenaria, concretagem, contrapiso, além de possuir capacitação técnica para instalações hidráulicas (água e esgoto) e assentamento de pisos e porcelanatos. Foco em prumo perfeito, nivelamento e eliminação de vazamentos. Obs.: também executa trabalhos como telhadista, eletricista e carpintaria.",
+    "atuacao": [
+      "Alvenaria e concretagem",
+      "Contrapiso",
+      "Instalações hidráulicas (água e esgoto)",
+      "Assentamento de pisos e porcelanatos",
+      "Também atua como telhadista, eletricista e carpinteiro"
+    ],
+    "contato": "(77) 99999-9999",
+    "email": "contato@hubconstrucao.com.br",
+    "avatar": "https://i.ibb.co/NfhMXnr/perfil-1.jpg",
+    "whatsapp": "https://wa.me/5577999999999?text=Ol%C3%A1%20Ronaldo%21%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Constru%C3%A7%C3%A3o%20Civil%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+  },
+  "2": {
+    "nome": "Leonardo",
+    "profissao": "Pedreiro (Construção, Hidráulica e Revestimentos)",
+    "categoria": "pedreiro",
+    "categoriaLabel": "Pedreiro",
+    "location": "Poções - BA e região",
+    "tags": [
+      "Alvenaria",
+      "Concretagem",
+      "Contrapiso",
+      "Hidráulica",
+      "Pisos e Porcelanatos",
+      "Revestimentos"
+    ],
+    "bio": "Profissional completo para obras residenciais e comerciais, atuando do alicerce ao acabamento. Executa alvenaria, concretagem, contrapiso, além de possuir capacitação técnica para instalações hidráulicas (água e esgoto) e assentamento de pisos e porcelanatos. Foco em prumo perfeito, nivelamento e eliminação de vazamentos.",
+    "atuacao": [
+      "Alvenaria e concretagem",
+      "Contrapiso",
+      "Instalações hidráulicas (água e esgoto)",
+      "Assentamento de pisos e porcelanatos"
+    ],
+    "contato": "(77) 99999-9999",
+    "email": "contato@hubconstrucao.com.br",
+    "avatar": "https://i.ibb.co/WWzcG2Lf/perfil-7.jpg",
+    "whatsapp": "https://wa.me/5577999999999?text=Ol%C3%A1%20Leonardo%21%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Constru%C3%A7%C3%A3o%20Civil%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+  },
+  "3": {
+    "nome": "Hernandes Amorim",
+    "profissao": "Pedreiro (Construção, Hidráulica e Revestimentos)",
+    "categoria": "pedreiro",
+    "categorias": ["pedreiro", "telhadista"],
+    "categoriaLabel": "Pedreiro / Carpinteiro / Telhadista",
+    "location": "Poções - BA e região",
+    "tags": [
+      "Alvenaria",
+      "Concretagem",
+      "Contrapiso",
+      "Hidráulica",
+      "Pisos e Porcelanatos",
+      "Carpintaria",
+      "Telhados"
+    ],
+    "bio": "Profissional completo para obras residenciais e comerciais, atuando do alicerce ao acabamento. Executa alvenaria, concretagem, contrapiso, além de possuir capacitação técnica para instalações hidráulicas (água e esgoto) e assentamento de pisos e porcelanatos. Foco em prumo perfeito, nivelamento e eliminação de vazamentos. Obs.: também atua como carpinteiro e telhadista.",
+    "atuacao": [
+      "Alvenaria e concretagem",
+      "Contrapiso",
+      "Instalações hidráulicas (água e esgoto)",
+      "Assentamento de pisos e porcelanatos",
+      "Também atua como carpinteiro e telhadista"
+    ],
+    "contato": "(77) 99999-9999",
+    "email": "contato@hubconstrucao.com.br",
+    "avatar": "https://i.ibb.co/LzdmsCMW/perfil-11.jpg",
+    "whatsapp": "https://wa.me/5577999999999?text=Ol%C3%A1%20Hernandes%21%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Constru%C3%A7%C3%A3o%20Civil%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+  },
+  "4": {
+    "nome": "Aerico",
+    "profissao": "Soldador (Serralheria e Estruturas Metálicas)",
+    "categoria": "serralheiro",
+    "categoriaLabel": "Soldador / Serralheiro",
+    "location": "Poções - BA e região",
+    "tags": [
+      "Serralheria",
+      "Soldagem",
+      "Estruturas Metálicas",
+      "Portões",
+      "Grades",
+      "Corrimãos e Escadas"
+    ],
+    "bio": "Especialista em metalurgia e serralheria. Atua na fabricação, montagem e reparo de estruturas metálicas, portões, grades, corrimãos e escadas. Domínio de diferentes processos de soldagem, garantindo resistência mecânica e alinhamento preciso das peças.",
+    "atuacao": [
+      "Fabricação, montagem e reparo de estruturas metálicas",
+      "Portões e grades",
+      "Corrimãos e escadas",
+      "Diferentes processos de soldagem"
+    ],
+    "contato": "(77) 99999-9999",
+    "email": "contato@hubconstrucao.com.br",
+    "avatar": "https://i.ibb.co/27XQLmQm/perfil-9.jpg",
+    "whatsapp": "https://wa.me/5577999999999?text=Ol%C3%A1%20Aerico%21%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Constru%C3%A7%C3%A3o%20Civil%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+  },
+  "5": {
+    "nome": "Adiel Meira",
+    "profissao": "Técnico em Manutenção Predial",
+    "categoria": "manutencao",
+    "categoriaLabel": "Manutenção Predial",
+    "location": "Poções - BA e região",
+    "tags": [
+      "Manutenção Predial",
+      "Reparos Hidráulicos",
+      "Elétrica Básica",
+      "Manutenção Preventiva",
+      "Manutenção Corretiva",
+      "Instalações Domésticas"
+    ],
+    "bio": "Profissional versátil e focado em soluções rápidas para o dia a dia. Realiza manutenções preventivas e corretivas de pequeno porte, abrangendo reparos hidráulicos (vazamentos, trocas de reparos), elétricos básicos e instalações domésticas em geral. Foco em praticidade, limpeza e segurança.",
+    "atuacao": [
+      "Manutenções preventivas e corretivas de pequeno porte",
+      "Reparos hidráulicos (vazamentos, trocas de reparos)",
+      "Reparos elétricos básicos",
+      "Instalações domésticas em geral"
+    ],
+    "contato": "(77) 99999-9999",
+    "email": "contato@hubconstrucao.com.br",
+    "avatar": "https://i.ibb.co/tMx4YVn1/perfil-4.jpg",
+    "whatsapp": "https://wa.me/5577999999999?text=Ol%C3%A1%20Adiel%21%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Constru%C3%A7%C3%A3o%20Civil%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+  },
+  "6": {
+    "nome": "Neto Novais",
+    "profissao": "Telhadista (Coberturas e Estruturas)",
+    "categoria": "telhadista",
+    "categoriaLabel": "Telhadista",
+    "location": "Poções - BA e região",
+    "tags": [
+      "Telhados",
+      "Coberturas",
+      "Calhas",
+      "Telhado Colonial",
+      "Fibrocimento",
+      "Telhado Embutido"
+    ],
+    "bio": "Profissional qualificado na montagem e manutenção de estruturas e coberturas. Especialista em dimensionamento, reparo e execução de telhados (coloniais, fibrocimento, embutidos) e calhas. Garantia de estanqueidade e segurança contra infiltrações.",
+    "atuacao": [
+      "Montagem e manutenção de estruturas e coberturas",
+      "Telhados coloniais, fibrocimento e embutidos",
+      "Calhas",
+      "Dimensionamento e reparo"
+    ],
+    "contato": "(77) 99999-9999",
+    "email": "contato@hubconstrucao.com.br",
+    "avatar": "https://i.ibb.co/7dWcQSF5/perfil-8.jpg",
+    "whatsapp": "https://wa.me/5577999999999?text=Ol%C3%A1%20Neto%21%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Constru%C3%A7%C3%A3o%20Civil%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+  },
+  "7": {
+    "nome": "Ibraim",
+    "profissao": "Técnico em Refrigeração e Elétrica",
+    "categoria": "eletricista",
+    "categoriaLabel": "Refrigeração e Elétrica",
+    "location": "Poções - BA e região",
+    "tags": [
+      "Ar-condicionado",
+      "Recarga de Gás",
+      "Higienização",
+      "Instalações Elétricas",
+      "Quadros QDC",
+      "NBR 5410"
+    ],
+    "bio": "Especialista em climatização e instalações elétricas prediais. Realiza instalação de ar-condicionado, recarga de gás e higienização, além de executar infraestrutura elétrica, passagem de cabos e montagem de quadros de distribuição (QDC). Trabalho rigorosamente alinhado às normas de segurança (NBR 5410).",
+    "atuacao": [
+      "Instalação de ar-condicionado",
+      "Recarga de gás e higienização",
+      "Infraestrutura elétrica e passagem de cabos",
+      "Montagem de quadros de distribuição (QDC)"
+    ],
+    "contato": "(77) 99999-9999",
+    "email": "contato@hubconstrucao.com.br",
+    "avatar": "https://i.ibb.co/ymS39bPp/perfil-6.jpg",
+    "whatsapp": "https://wa.me/5577999999999?text=Ol%C3%A1%20Ibraim%21%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Constru%C3%A7%C3%A3o%20Civil%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+  },
+  "8": {
+    "nome": "Alexsandro",
+    "profissao": "Pintor",
+    "categoria": "pintor",
+    "categoriaLabel": "Pintor",
+    "location": "Poções - BA e região",
+    "tags": [
+      "Pintura Residencial",
+      "Massa Corrida",
+      "Acrílica",
+      "Texturas",
+      "Pintura Fina",
+      "Acabamento"
+    ],
+    "bio": "Especialista em acabamento e estética imobiliária. Realiza tratamentos de superfícies internas e externas, aplicação de massa corrida, acrílica, texturas e pinturas finas. Atua com foco em limpeza, isolamento correto do ambiente (proteção de pisos) e durabilidade da pintura.",
+    "atuacao": [
+      "Tratamento de superfícies internas e externas",
+      "Massa corrida e acrílica",
+      "Texturas",
+      "Pinturas finas"
+    ],
+    "contato": "(77) 99999-9999",
+    "email": "contato@hubconstrucao.com.br",
+    "avatar": "https://i.ibb.co/GQB8pYy6/perfil-3.jpg",
+    "whatsapp": "https://wa.me/5577999999999?text=Ol%C3%A1%20Alexsandro%21%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Constru%C3%A7%C3%A3o%20Civil%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+  },
+  "9": {
+    "nome": "Mateus Meira",
+    "profissao": "Pintor",
+    "categoria": "pintor",
+    "categoriaLabel": "Pintor",
+    "location": "Poções - BA e região",
+    "tags": [
+      "Pintura Residencial",
+      "Massa Corrida",
+      "Acrílica",
+      "Texturas",
+      "Pintura Fina",
+      "Acabamento"
+    ],
+    "bio": "Especialista em acabamento e estética imobiliária. Realiza tratamentos de superfícies internas e externas, aplicação de massa corrida, acrílica, texturas e pinturas finas. Atua com foco em limpeza, isolamento correto do ambiente (proteção de pisos) e durabilidade da pintura.",
+    "atuacao": [
+      "Tratamento de superfícies internas e externas",
+      "Massa corrida e acrílica",
+      "Texturas",
+      "Pinturas finas"
+    ],
+    "contato": "(77) 99999-9999",
+    "email": "contato@hubconstrucao.com.br",
+    "avatar": "https://i.ibb.co/YTbYPQdj/perfil-5.jpg",
+    "whatsapp": "https://wa.me/5577999999999?text=Ol%C3%A1%20Mateus%21%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Constru%C3%A7%C3%A3o%20Civil%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+  },
+  "10": {
+    "nome": "Dário de Jesus",
+    "profissao": "Gesseiro / Instalador de Drywall",
+    "categoria": "gesseiro",
+    "categoriaLabel": "Gesseiro / Drywall",
+    "location": "Poções - BA e região",
+    "tags": [
+      "Drywall",
+      "Rebaixamento de Tetos",
+      "Molduras",
+      "Decoração 3D",
+      "Sancas",
+      "Fitas de LED",
+      "Divisórias"
+    ],
+    "bio": "Especialista em sistemas construtivos a seco e acabamentos rápidos. Executa rebaixamento de tetos, molduras, decorações 3D, sancas, fitas de led e divisórias estruturadas em drywall. Foco em alinhamento a laser, velocidade de execução, isolamento acústico e entrega da parede lisa e pronta para pintura, gerando o mínimo de entulho.",
+    "atuacao": [
+      "Rebaixamento de tetos e molduras",
+      "Decorações 3D",
+      "Sancas e fitas de LED",
+      "Divisórias estruturadas em drywall"
+    ],
+    "contato": "(77) 99999-9999",
+    "email": "contato@hubconstrucao.com.br",
+    "avatar": "https://i.ibb.co/vrMfV5P/perfil-10.jpg",
+    "whatsapp": "https://wa.me/5577999999999?text=Ol%C3%A1%20D%C3%A1rio%21%20Vi%20seu%20perfil%20no%20Hub%20Digital%20da%20Constru%C3%A7%C3%A3o%20Civil%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+  }
+};
 
       // ===== SERVIÇOS POR PROFISSÃO =====
       const servicosPorProfissao = {
         pedreiro: [
-          {
-            icon: "https://i.ibb.co/v4Lc5CqX/pedreiro.png",
-            name: "Alvenaria",
-            description:
-              "Construção de paredes, colunas, vigas e fundações com qualidade e segurança.",
-            price: "Sob consulta",
-          },
-          {
-            icon: "https://i.ibb.co/v4Lc5CqX/pedreiro.png",
-            name: "Reformas",
-            description:
-              "Reformas completas ou parciais, adaptando ambientes às suas necessidades.",
-            price: "Sob consulta",
-          },
-          {
-            icon: "https://i.ibb.co/v4Lc5CqX/pedreiro.png",
-            name: "Construção de Casas",
-            description: "Projetos completos desde a fundação até a entrega da obra pronta.",
-            price: "Sob consulta",
-          },
-          {
-            icon: "https://i.ibb.co/v4Lc5CqX/pedreiro.png",
-            name: "Acabamentos",
-            description: "Reboco, massas e acabamentos finos com alto padrão de qualidade.",
-            price: "Sob consulta",
-          },
+          { icon: "https://i.ibb.co/v4Lc5CqX/pedreiro.png", name: "Alvenaria e Concretagem", description: "Construção de paredes, estruturas e concretagem com prumo perfeito.", price: "Sob consulta" },
+          { icon: "https://i.ibb.co/v4Lc5CqX/pedreiro.png", name: "Contrapiso e Nivelamento", description: "Contrapiso e nivelamento de superfícies para receber o acabamento.", price: "Sob consulta" },
+          { icon: "https://i.ibb.co/v4Lc5CqX/pedreiro.png", name: "Instalações Hidráulicas", description: "Instalação de água e esgoto com foco na eliminação de vazamentos.", price: "Sob consulta" },
+          { icon: "https://i.ibb.co/v4Lc5CqX/pedreiro.png", name: "Pisos e Porcelanatos", description: "Assentamento de pisos e porcelanatos com acabamento alinhado.", price: "Sob consulta" },
         ],
         pintor: [
-          {
-            icon: "https://i.ibb.co/DnQ8FCN/pintor.png",
-            name: "Pintura Residencial",
-            description: "Pintura de interiores e exteriores com cores e acabamentos de qualidade.",
-            price: "Sob consulta",
-          },
-          {
-            icon: "https://i.ibb.co/DnQ8FCN/pintor.png",
-            name: "Texturização",
-            description: "Aplicação de texturas e efeitos decorativos em paredes e tetos.",
-            price: "Sob consulta",
-          },
-          {
-            icon: "https://i.ibb.co/DnQ8FCN/pintor.png",
-            name: "Pintura de Fachadas",
-            description: "Pintura de fachadas com tintas de alta durabilidade e proteção.",
-            price: "Sob consulta",
-          },
-          {
-            icon: "https://i.ibb.co/DnQ8FCN/pintor.png",
-            name: "Revestimentos Decorativos",
-            description: "Aplicação de revestimentos decorativos e papel de parede.",
-            price: "Sob consulta",
-          },
+          { icon: "https://i.ibb.co/DnQ8FCN/pintor.png", name: "Tratamento de Superfícies", description: "Preparo de superfícies internas e externas antes da pintura.", price: "Sob consulta" },
+          { icon: "https://i.ibb.co/DnQ8FCN/pintor.png", name: "Massa Corrida e Acrílica", description: "Aplicação de massa corrida e tinta acrílica com acabamento uniforme.", price: "Sob consulta" },
+          { icon: "https://i.ibb.co/DnQ8FCN/pintor.png", name: "Texturas", description: "Aplicação de texturas decorativas em paredes internas e externas.", price: "Sob consulta" },
+          { icon: "https://i.ibb.co/DnQ8FCN/pintor.png", name: "Pinturas Finas", description: "Pinturas finas com proteção de pisos e foco em limpeza e durabilidade.", price: "Sob consulta" },
         ],
         eletricista: [
-          {
-            icon: "https://i.ibb.co/Fq0yjsPK/eletricista.png",
-            name: "Instalações Elétricas",
-            description: "Instalação completa de sistemas elétricos residenciais e comerciais.",
-            price: "Sob consulta",
-          },
-          {
-            icon: "https://i.ibb.co/Fq0yjsPK/eletricista.png",
-            name: "Automação Residencial",
-            description: "Projetos de automação para iluminação, cortinas e climatização.",
-            price: "Sob consulta",
-          },
-          {
-            icon: "https://i.ibb.co/Fq0yjsPK/eletricista.png",
-            name: "Manutenção Elétrica",
-            description: "Serviços de manutenção preventiva e corretiva em sistemas elétricos.",
-            price: "Sob consulta",
-          },
-          {
-            icon: "https://i.ibb.co/Fq0yjsPK/eletricista.png",
-            name: "Iluminação LED",
-            description: "Projetos e instalação de iluminação LED eficiente e moderna.",
-            price: "Sob consulta",
-          },
+          { icon: "https://i.ibb.co/Fq0yjsPK/eletricista.png", name: "Instalação de Ar-condicionado", description: "Instalação de aparelhos de ar-condicionado residenciais e comerciais.", price: "Sob consulta" },
+          { icon: "https://i.ibb.co/Fq0yjsPK/eletricista.png", name: "Recarga de Gás e Higienização", description: "Recarga de gás e higienização para manter o desempenho do equipamento.", price: "Sob consulta" },
+          { icon: "https://i.ibb.co/Fq0yjsPK/eletricista.png", name: "Infraestrutura Elétrica", description: "Infraestrutura elétrica predial e passagem de cabos, conforme a NBR 5410.", price: "Sob consulta" },
+          { icon: "https://i.ibb.co/Fq0yjsPK/eletricista.png", name: "Quadros de Distribuição (QDC)", description: "Montagem de quadros de distribuição com segurança e organização.", price: "Sob consulta" },
         ],
-        encanador: [
-          {
-            icon: "https://i.ibb.co/1fP5St02/encanador.png",
-            name: "Instalação Hidráulica",
-            description: "Instalação de sistemas hidráulicos para água fria, quente e esgoto.",
-            price: "Sob consulta",
-          },
-          {
-            icon: "https://i.ibb.co/1fP5St02/encanador.png",
-            name: "Reparo de Vazamentos",
-            description: "Detecção e reparo de vazamentos em tubulações com técnicas modernas.",
-            price: "Sob consulta",
-          },
-          {
-            icon: "https://i.ibb.co/1fP5St02/encanador.png",
-            name: "Reformas Hidráulicas",
-            description: "Reformas e modernização de sistemas hidráulicos em residências.",
-            price: "Sob consulta",
-          },
-          {
-            icon: "https://i.ibb.co/1fP5St02/encanador.png",
-            name: "Caixa d'Água",
-            description: "Instalação e manutenção de caixas d'água com sistemas de bombeamento.",
-            price: "Sob consulta",
-          },
+        manutencao: [
+          { icon: "https://i.ibb.co/1fP5St02/encanador.png", name: "Reparos Hidráulicos", description: "Correção de vazamentos e troca de reparos.", price: "Sob consulta" },
+          { icon: "https://i.ibb.co/1fP5St02/encanador.png", name: "Reparos Elétricos Básicos", description: "Pequenos reparos e ajustes elétricos do dia a dia.", price: "Sob consulta" },
+          { icon: "https://i.ibb.co/1fP5St02/encanador.png", name: "Instalações Domésticas", description: "Instalações domésticas em geral, com praticidade e limpeza.", price: "Sob consulta" },
+          { icon: "https://i.ibb.co/1fP5St02/encanador.png", name: "Manutenção Preventiva e Corretiva", description: "Manutenções de pequeno porte para evitar e resolver problemas.", price: "Sob consulta" },
         ],
         gesseiro: [
-          {
-            icon: "https://i.ibb.co/HLc3k7BL/gesseiro.png",
-            name: "Forro de Gesso",
-            description: "Instalação de forros de gesso com design moderno e acabamento impecável.",
-            price: "Sob consulta",
-          },
-          {
-            icon: "https://i.ibb.co/HLc3k7BL/gesseiro.png",
-            name: "Drywall",
-            description: "Instalação de sistemas drywall para divisórias e revestimentos.",
-            price: "Sob consulta",
-          },
-          {
-            icon: "https://i.ibb.co/HLc3k7BL/gesseiro.png",
-            name: "Sancas de Gesso",
-            description: "Confeição e instalação de sancas de gesso com detalhes personalizados.",
-            price: "Sob consulta",
-          },
-          {
-            icon: "https://i.ibb.co/HLc3k7BL/gesseiro.png",
-            name: "Acabamentos em Gesso",
-            description: "Serviços de acabamento em gesso com alto padrão de qualidade.",
-            price: "Sob consulta",
-          },
+          { icon: "https://i.ibb.co/HLc3k7BL/gesseiro.png", name: "Rebaixamento de Tetos e Molduras", description: "Rebaixamento de tetos e molduras com alinhamento a laser.", price: "Sob consulta" },
+          { icon: "https://i.ibb.co/HLc3k7BL/gesseiro.png", name: "Sancas e Fitas de LED", description: "Sancas com iluminação em fita de LED embutida.", price: "Sob consulta" },
+          { icon: "https://i.ibb.co/HLc3k7BL/gesseiro.png", name: "Decorações 3D", description: "Revestimentos e decorações 3D em gesso.", price: "Sob consulta" },
+          { icon: "https://i.ibb.co/HLc3k7BL/gesseiro.png", name: "Divisórias em Drywall", description: "Divisórias estruturadas com isolamento acústico e parede pronta para pintura.", price: "Sob consulta" },
         ],
         serralheiro: [
-          {
-            icon: "https://i.ibb.co/tw2rMy8z/Lixadeira.png",
-            name: "Estruturas Metálicas",
-            description: "Projetos e execução de estruturas metálicas para edificações.",
-            price: "Sob consulta",
-          },
-          {
-            icon: "https://i.ibb.co/tw2rMy8z/Lixadeira.png",
-            name: "Portões e Grades",
-            description: "Fabricação e instalação de portões, grades e estruturas de proteção.",
-            price: "Sob consulta",
-          },
-          {
-            icon: "https://i.ibb.co/tw2rMy8z/Lixadeira.png",
-            name: "Esquadrias de Alumínio",
-            description: "Fabricação e instalação de esquadrias de alumínio com design moderno.",
-            price: "Sob consulta",
-          },
-          {
-            icon: "https://i.ibb.co/tw2rMy8z/Lixadeira.png",
-            name: "Projetos Personalizados",
-            description: "Desenvolvimento de projetos personalizados em metal sob medida.",
-            price: "Sob consulta",
-          },
+          { icon: "https://i.ibb.co/tw2rMy8z/Lixadeira.png", name: "Estruturas Metálicas", description: "Fabricação, montagem e reparo de estruturas metálicas.", price: "Sob consulta" },
+          { icon: "https://i.ibb.co/tw2rMy8z/Lixadeira.png", name: "Portões e Grades", description: "Portões e grades sob medida com soldagem resistente.", price: "Sob consulta" },
+          { icon: "https://i.ibb.co/tw2rMy8z/Lixadeira.png", name: "Corrimãos e Escadas", description: "Corrimãos e escadas metálicas com alinhamento preciso.", price: "Sob consulta" },
+          { icon: "https://i.ibb.co/tw2rMy8z/Lixadeira.png", name: "Soldagem e Reparos", description: "Soldagem e reparo de peças metálicas por diferentes processos.", price: "Sob consulta" },
+        ],
+        telhadista: [
+          { icon: "https://i.ibb.co/CKYt8Vh3/Cortador-de-azulejos-industrial-colorido.png", name: "Telhados Coloniais", description: "Execução e reparo de telhados coloniais.", price: "Sob consulta" },
+          { icon: "https://i.ibb.co/CKYt8Vh3/Cortador-de-azulejos-industrial-colorido.png", name: "Telhados de Fibrocimento", description: "Montagem e manutenção de coberturas em fibrocimento.", price: "Sob consulta" },
+          { icon: "https://i.ibb.co/CKYt8Vh3/Cortador-de-azulejos-industrial-colorido.png", name: "Telhados Embutidos e Calhas", description: "Telhados embutidos e calhas com garantia de estanqueidade.", price: "Sob consulta" },
+          { icon: "https://i.ibb.co/CKYt8Vh3/Cortador-de-azulejos-industrial-colorido.png", name: "Reparo contra Infiltrações", description: "Dimensionamento e reparo para segurança contra infiltrações.", price: "Sob consulta" },
         ],
       };
 
+
+            // ===== SERVIÇOS EXTRAS POR PROFISSIONAL (além dos da categoria principal) =====
+      const servicosExtrasPorProfissional = {
+        "1": [
+          { icon: "https://i.ibb.co/CKYt8Vh3/Cortador-de-azulejos-industrial-colorido.png", name: "Telhados e Coberturas", description: "Execução, reparo e manutenção de telhados e coberturas.", price: "Sob consulta" },
+          { icon: "https://i.ibb.co/Fq0yjsPK/eletricista.png", name: "Instalações Elétricas", description: "Serviços elétricos residenciais e comerciais.", price: "Sob consulta" },
+          { icon: "https://i.ibb.co/v4Lc5CqX/pedreiro.png", name: "Carpintaria", description: "Serviços de carpintaria para obras e acabamentos.", price: "Sob consulta" },
+        ],
+        "3": [
+          { icon: "https://i.ibb.co/v4Lc5CqX/pedreiro.png", name: "Carpintaria", description: "Serviços de carpintaria para obras e acabamentos.", price: "Sob consulta" },
+          { icon: "https://i.ibb.co/CKYt8Vh3/Cortador-de-azulejos-industrial-colorido.png", name: "Telhados e Coberturas", description: "Execução, reparo e manutenção de telhados e coberturas.", price: "Sob consulta" },
+        ],
+      };
 
       // ===== VARIÁVEIS DO CARROSSEL =====
       let currentSlide = 0;
@@ -6521,7 +6211,7 @@
               month: "long",
               year: "numeric",
             }),
-            localizacao: "Vitória da Conquista - BA",
+            localizacao: "Poções - BA e região",
             duracao: "Sob consulta",
             whatsapp:
               "https://wa.me/5577999999999?text=Olá!%20Vi%20o%20projeto%20" +
@@ -6718,14 +6408,15 @@
         document.getElementById("profileName").innerHTML =
           `${prof.nome} <span class="badge"><img src="https://i.ibb.co/zpmFvpp/icons-4.png" alt="Verificado" style="width:14px;height:14px;object-fit:contain;" /> Verificado</span>`;
         document.getElementById("profileProfession").textContent =
-          prof.profissao;
+          prof.categorias && prof.categorias.length > 1
+            ? prof.categoriaLabel
+            : prof.profissao;
         document.getElementById("profileLocation").innerHTML =
           `<img src="https://i.ibb.co/8LrxMqTs/icon-4.png" alt="Local" style="width:16px;height:16px;object-fit:contain;" /> ${prof.location}`;
         document.getElementById("profileBio").textContent = prof.bio;
         document.getElementById("profileFormacao").innerHTML =
-          prof.formacao.replace(/\n/g, "<br>");
-        document.getElementById("profileExperiencia").textContent =
-          `💼 ${prof.experiencia}`;
+          prof.atuacao.map((a) => "• " + a).join("<br>");
+        document.getElementById("profileExperiencia").textContent = "";
 
         const tagsContainer = document.getElementById("profileTags");
         tagsContainer.innerHTML = prof.tags
@@ -6733,17 +6424,16 @@
           .join("");
 
         document.getElementById("detailLocation").textContent = prof.location;
-        document.getElementById("detailExperiencia").textContent =
-          prof.experiencia.replace(" anos atuando", "");
+        document.getElementById("detailExperiencia").textContent = "Poções - BA e região";
         document.getElementById("detailContato").textContent = prof.contato;
         document.getElementById("detailEmail").textContent = prof.email;
         document.getElementById("detailCategoria").textContent =
-          prof.categoria.charAt(0).toUpperCase() + prof.categoria.slice(1);
+          prof.categoriaLabel;
 
         document.getElementById("profileWhatsApp").href = prof.whatsapp;
 
         renderProfilePortfolio(id);
-        renderProfileServices(prof.categoria);
+        renderProfileServices(prof.categoria, id);
 
         const portfolioItems = portfolioPorProfissional[id] || [];
         document.getElementById("portfolioBadge").textContent =
@@ -6801,11 +6491,16 @@
       }
 
       // ===== RENDERIZAR SERVIÇOS POR PROFISSÃO =====
-      function renderProfileServices(categoria) {
+      function renderProfileServices(categoria, profId) {
         const grid = document.getElementById("profileServicesGrid");
         grid.innerHTML = "";
-        const items =
-          servicosPorProfissao[categoria] || servicosPorProfissao.pedreiro;
+        const items = [
+          ...(servicosPorProfissao[categoria] || servicosPorProfissao.pedreiro),
+          ...(servicosExtrasPorProfissional[profId] || []),
+        ];
+
+        const sb = document.getElementById("servicesBadge");
+        if (sb) sb.textContent = items.length;
 
         items.forEach((item) => {
           const div = document.createElement("div");
@@ -6977,7 +6672,7 @@
               if (!matchService) match = false;
             }
             if (category) {
-              if (cardCategory !== category) match = false;
+              if (!cardCategory.split(/\s+/).includes(category)) match = false;
             }
 
             if (match) {
